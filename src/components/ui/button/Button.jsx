@@ -29,6 +29,8 @@ export const Button = React.forwardRef(
       { "button--sm": size === "sm" },
       { "button--md": size === "md" },
       { "button--l": size === "l" },
+      { "button--full": size === "full" },
+      { "button--auto": size === "auto" },
       { "button--br-0": br === "0" },
       { "button--br-sm": br === "sm" },
       { "button--br-md": br === "md" },
@@ -53,7 +55,16 @@ export const Button = React.forwardRef(
 Button.displayName = "Button"
 
 Button.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "error", "warning"]),
-  size: PropTypes.oneOf(["sm", "md", "l"]),
+  color: PropTypes.oneOf([
+    "primary1",
+    "primary2",
+    "secondary1",
+    "secondary2",
+    "error1",
+    "error2",
+    "warning1",
+    "warning2",
+  ]),
+  size: PropTypes.oneOf(["sm", "md", "l", "full", "auto"]),
   br: PropTypes.oneOf(["0", "sm", "md", "l", "full", "circle"]),
 }

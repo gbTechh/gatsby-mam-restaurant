@@ -55,8 +55,8 @@
   --space-5: calc(var(--spacing) * 8);
   --space-6: calc(var(--spacing) * 14);
 
-  --size-gutter: var(--space-5);
-  --size-gap: var(--space-6);
+  --container-maxwidth: 1800px;
+  --container-padding: calc(var(--spacing) * 5);
 }
 html {
   -webkit-text-size-adjust: 100%;

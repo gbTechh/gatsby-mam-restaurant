@@ -57,3 +57,29 @@ export const Text = React.forwardRef(
     return text
   }
 )
+
+Text.displayName = "Text"
+
+Text.propTypes = {
+  color: PropTypes.oneOf([
+    "primary1",
+    "primary2",
+    "secondary1",
+    "secondary2",
+    "error1",
+    "error2",
+    "warning1",
+    "warning2",
+  ]),
+  size: PropTypes.oneOf(["h1", "h2", "h3", "h4", "base", "small"]),
+  align: PropTypes.oneOf(["center", "left", "right"]),
+  fw: PropTypes.oneOf([
+    "head",
+    "strong",
+    "title",
+    "bquote",
+    "base",
+    "regular",
+    "tiny",
+  ]),
+}

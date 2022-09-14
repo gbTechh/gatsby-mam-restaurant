@@ -1,0 +1,29 @@
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 100%;
+  max-width: var(--container-maxwidth);
+  padding: 0 var(--container-padding);
+}
+.container--fluid{
+  max-width: 100%;
+}
+.container--pd-0{
+  padding:0;
+}
+.container--pd-1{
+  padding:0 calc(var(--spacing) * 1);
+}
+.container--pd-2{
+  padding:0 calc(var(--spacing) * 2);
+}
+.container--pd-3{
+  padding:0 calc(var(--spacing) * 3);
+}
+.container--pd-4{
+  padding:0 calc(var(--spacing) * 4);
+}
+.container--pd-5{
+  padding:0 calc(var(--spacing) * 5);
+}

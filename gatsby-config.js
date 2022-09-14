@@ -7,7 +7,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://gatsbywordpresshomepage.gatsbyjs.io/",
-    title: "Gatsby WordPress Homepage Starter",
+    title: "MAM Restaurant",
     author: `Gatsby`,
     description: "A Gatsby Starter for building homepages with WordPress",
   },
