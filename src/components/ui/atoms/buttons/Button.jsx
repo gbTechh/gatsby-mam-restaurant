@@ -1,5 +1,6 @@
 import React from "react"
 import classNames from "classnames"
+import PropTypes from "prop-types"
 
 import "./button.css"
 
@@ -43,3 +44,11 @@ export const Button = React.forwardRef(
     return button
   }
 )
+
+Button.displayName = "Button"
+
+Button.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary", "error", "warning"]),
+  size: PropTypes.oneOf(["sm", "md", "l"]),
+  br: PropTypes.oneOf(["0", "sm", "md", "l", "full", "circle"]),
+}
