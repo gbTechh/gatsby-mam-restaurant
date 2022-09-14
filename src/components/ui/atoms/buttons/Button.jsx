@@ -35,10 +35,11 @@ export const Button = React.forwardRef(
     const button = React.createElement(
       as,
       {
-        className: `${classes} ${props.classNames}`,
+        ...props,
+        className: `${classes} ${props.className}`,
         ref: ref,
       },
-      children
+      ...children
     )
 
     return button
