@@ -1,4 +1,8 @@
 .button{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border:none;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -6,6 +10,54 @@
   min-width:100px;
   max-width: 300px;
 }
-.button-primary{
-
+.button:hover{
+  
+}
+.button--primary{
+  background: var(--color-primary);
+  color:var(--color-dark-text);
+}
+.button--secondary{
+  background: var(--color-secondary);
+  color:var(--color-dark-text);
+}
+.button--warning{
+  background: var(--color-warning);
+  color:var(--color-dark-text);
+}
+.button--error{
+  background: var(--color-error);
+  color:var(--color-dark-text);
+}
+/**SIZEEEES***/
+.button--sm{
+  height: 40px;
+  padding: 0 calc(var(--spacing) * 2);
+}
+.button--md{
+  height: 40px;
+  padding: 0 calc(var(--spacing) * 3);
+}
+.button--l{
+  height: 40px;
+  padding: 0 calc(var(--spacing) * 4);
+}
+/***BORDER RADIUS**/
+.button--br-0{
+  border-radius: 0;
+}
+.button--br-sm{
+  border-radius: calc(var(--spacing) * 1);
+}
+.button--br-md{
+  border-radius: calc(var(--spacing) * 2);
+}
+.button--br-l{
+  border-radius: calc(var(--spacing) * 3);
+}
+.button--br-full{
+  border-radius: 999.99px;
+}
+.button--br-circle{
+  border-radius: 50%;
 }
