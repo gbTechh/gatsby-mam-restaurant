@@ -12,12 +12,7 @@ module.exports = {
     description: "A Gatsby Starter for building homepages with WordPress",
   },
   plugins: [
-    {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        url: process.env.WPGRAPHQL_URL,
-      },
-    },
+
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
@@ -37,3 +32,9 @@ module.exports = {
     },
   ],
 }
+/*{
+      resolve: "gatsby-source-wordpress",
+      options: {
+        url: process.env.WPGRAPHQL_URL,
+      },
+    },*/

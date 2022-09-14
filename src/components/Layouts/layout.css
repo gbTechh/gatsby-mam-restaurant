@@ -1,0 +1,342 @@
+:root {
+  --color-text: #333;
+  --color-primary: #7026b9;
+  --color-secondary: #111111;
+
+  --shadow-black-1:0px 5px 20px 0 rgba(0, 0, 0, 0.12);
+  --shadow-black-2:0px 8px 30px rgba(0, 0, 0, 0.24);
+
+
+  --spacing: 4px;
+  --border-radius-sm: var(--spacing);
+  --border-radius-md: calc(var(--spacing) * 2);
+  --border-radius-l: calc(var(--spacing) * 4);
+  --border-radius-xl: calc(var(--spacing) * 8);
+  --border-radius-full: 999.99px;
+  --border-radius-circle: 50%;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-h1: 40px;
+  --font-h2: 36px;
+  --font-h3: 27px;
+  --font-h4: 21px;
+  --font-base: 16px;
+  --font-small: 14px;
+  --font-weight-head:800;
+  --font-weight-strong:700;
+  --font-weight-title:600;
+  --font-weight-bquote:500;
+  --font-weight-base:400;
+  --font-weight-regular:300;
+  --font-weight-tiny:300;
+
+
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+  --space-1: var(--spacing);
+  --space-2: calc(var(--spacing) * 2);
+  --space-3: calc(var(--spacing) * 4);
+  --space-4: calc(var(--spacing) * 6);
+  --space-5: calc(var(--spacing) * 8);
+  --space-6: calc(var(--spacing) * 14);
+
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font: sans-serif;
+  font-size: var(--font-base);
+  line-height: var(--line-height-normal);
+  overflow-y: scroll;
+}
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
+  font-family: sans-serif;
+  font-family: var(--font-sans);
+  font-weight: normal;
+  margin: 0;
+  word-wrap: break-word;
+}
+a {
+  background-color: transparent;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+a:active,
+a:hover {
+  outline-width: 0;
+  text-decoration: none;
+}
+abbr[title] {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+  text-decoration: none;
+}
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  margin: 0;
+  margin-bottom: 3rem;
+  padding: 0;
+  line-height: var(--line-height-dense);
+  letter-spacing: -0.01em;
+}
+h1 > b {
+  color: var(--color-primary);
+}
+img {
+  border-style: none;
+  max-width: 100%;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: var(--font-mono);
+  font-size: 1em;
+  line-height: inherit;
+}
+hr {
+  box-sizing: content-box;
+  overflow: visible;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: calc(var(--space-4) - 1px);
+  background: hsla(0, 0%, 0%, 0.2);
+  border: none;
+  height: 1px;
+}
+* {
+  box-sizing: inherit;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+hgroup,
+img,
+figure,
+fieldset,
+ul,
+ol,
+dl,
+dd,
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--space-4);
+}
+ul,
+ol {
+  margin-left: var(--space-4);
+  list-style-position: outside;
+  list-style-image: none;
+}
+pre {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+  line-height: var(--line-height-normal);
+  background: hsla(0, 0%, 0%, 0.04);
+  border-radius: var(--border-radius);
+  overflow: auto;
+  word-wrap: normal;
+  padding: var(--space-4);
+}
+b,
+strong,
+dt,
+th {
+  font-weight: bold;
+}
+li {
+  margin-bottom: calc(var(--space-4) / 2);
+}
+ol li,
+ul li {
+  padding-left: 0;
+}
+li > ol,
+li > ul {
+  margin-bottom: calc(var(--space-4) / 2);
+  margin-left: var(--space-4);
+  margin-top: calc(var(--space-4) / 2);
+}
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+li *:last-child {
+  margin-bottom: 0;
+}
+p *:last-child {
+  margin-bottom: 0;
+}
+li > p {
+  margin-bottom: calc(var(--space-4) / 2);
+}
+p {
+  max-width: 680px;
+}
+code {
+  font-size: 0.875rem;
+}
+kbd {
+  font-size: 0.875rem;
+}
+samp {
+  font-size: 0.875rem;
+}
+abbr {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+}
+acronym {
+  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  cursor: help;
+}
+tt,
+code {
+  background-color: var(--color-code-bg);
+  border-radius: var(--border-radius);
+  color: var(--color-code);
+  font-family: var(--font-mono);
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  word-break: normal;
+}
+pre code {
+  background: none;
+}
+code:before,
+code:after,
+tt:before,
+tt:after {
+  content: "\00a0";
+  letter-spacing: -0.2em;
+}
+pre code:before,
+pre code:after,
+pre tt:before,
+pre tt:after {
+  content: none;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+    object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+    object-position: center center;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+p a {
+  display: inline;
+}
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {              
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+/* Configuramos el texto que seleccionamos */
+/* ::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+} */
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+    -moz-appearance: none;
+          appearance: none;
+}
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh; 
+  /* opcional */
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale; 
+}

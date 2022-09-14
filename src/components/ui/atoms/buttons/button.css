@@ -1,0 +1,11 @@
+.button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:max-content;
+  min-width:100px;
+  max-width: 300px;
+}
+.button-primary{
+
+}
