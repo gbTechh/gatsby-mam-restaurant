@@ -1,18 +1,28 @@
 // support for .env, .env.development, and .env.production
-require("dotenv").config()
+// require("dotenv").config()
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://gatsbywordpresshomepage.gatsbyjs.io/",
+    defaultTitle: "https://gatsbywordpresshomepage.gatsbyjs.io/",
     title: "MAM Restaurant",
     author: `Gatsby`,
     description: "A Gatsby Starter for building homepages with WordPress",
   },
-  plugins: [
-
+  plugins: [{
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        "url": "https://s5042771.saturnwp.link/graphql",
+        auth: {
+            htaccess: {
+            username: process.env.HTTPBASICAUTH_USERNAME,
+            password: process.env.HTTPBASICAUTH_PASSWORD
+          }
+        }
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
@@ -32,9 +42,3 @@ module.exports = {
     },
   ],
 }
-/*{
-      resolve: "gatsby-source-wordpress",
-      options: {
-        url: process.env.WPGRAPHQL_URL,
-      },
-    },*/
