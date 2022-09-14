@@ -1,8 +1,18 @@
 :root {
   --color-dark-text: rgb(29, 29, 29);
   --color-light-text: rgb(233, 230, 230);
-  --color-primary: #F5EFDB;
-  --color-secondary: #111111;
+
+  --color-primary-1: #DCCA86;
+  --color-primary-2: #A09462;
+
+  --color-secondary-1: #F5EFDB;
+  --color-secondary-2: #848484;
+
+  --color-warning-1: #FFCE2D;
+  --color-warning-2: #CFA30F;
+
+  --color-error-1: #FF1C45;
+  --color-error-2: #BA0021;
 
   --shadow-black-1:0px 5px 20px 0 rgba(0, 0, 0, 0.12);
   --shadow-black-2:0px 8px 30px rgba(0, 0, 0, 0.24);
@@ -32,7 +42,7 @@
   --font-weight-bquote:500;
   --font-weight-base:400;
   --font-weight-regular:300;
-  --font-weight-tiny:300;
+  --font-weight-tiny:200;
 
 
   --line-height-loose: 1.75;
@@ -199,9 +209,7 @@ p *:last-child {
 li > p {
   margin-bottom: calc(var(--space-4) / 2);
 }
-p {
-  max-width: 680px;
-}
+
 code {
   font-size: 0.875rem;
 }

@@ -1,1 +1,2 @@
-export * from './atoms';
+export * from './button/Button';
+export * from './text/Text';

@@ -8,7 +8,7 @@ export const Button = React.forwardRef(
   (
     {
       children,
-      color = "primary",
+      color = "secondary1",
       size = "md",
       br = "md",
       as = "button",
@@ -18,10 +18,14 @@ export const Button = React.forwardRef(
   ) => {
     const classes = classNames(
       "button",
-      { "button--primary": color === "primary" },
-      { "button--secondary": color === "secondary" },
-      { "button--warning": color === "warning" },
-      { "button--error": color === "error" },
+      { "button--primary-1": color === "primary1" },
+      { "button--primary-2": color === "primary2" },
+      { "button--secondary-1": color === "secondary1" },
+      { "button--secondary-2": color === "secondary2" },
+      { "button--warning-1": color === "warning1" },
+      { "button--warning-2": color === "warning2" },
+      { "button--error-1": color === "error1" },
+      { "button--error-2": color === "error2" },
       { "button--sm": size === "sm" },
       { "button--md": size === "md" },
       { "button--l": size === "l" },
@@ -39,7 +43,7 @@ export const Button = React.forwardRef(
         className: `${classes} ${props.className}`,
         ref: ref,
       },
-      ...children
+      children
     )
 
     return button
