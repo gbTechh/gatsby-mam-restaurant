@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import "./container.css"
 
 export const Container = React.forwardRef(
-  ({ children, fluid, as = "div", pd, ...props }, ref) => {
+  ({ children, fluid, as = "div", pd, className = "", ...props }, ref) => {
     const classes = classNames(
       "container",
       { "container--fluid": fluid },
@@ -20,7 +20,7 @@ export const Container = React.forwardRef(
       as,
       {
         ...props,
-        className: `${classes} ${props.className}`,
+        className: `${classes} ${className}`,
         ref: ref,
       },
       children

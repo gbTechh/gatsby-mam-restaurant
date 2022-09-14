@@ -12,6 +12,7 @@ export const Button = React.forwardRef(
       size = "md",
       br = "md",
       as = "button",
+      className = "",
       ...props
     },
     ref
@@ -42,7 +43,7 @@ export const Button = React.forwardRef(
       as,
       {
         ...props,
-        className: `${classes} ${props.className}`,
+        className: `${classes} ${className}`,
         ref: ref,
       },
       children

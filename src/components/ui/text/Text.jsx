@@ -13,6 +13,7 @@ export const Text = React.forwardRef(
       as = "p",
       align = "center",
       fw = "base",
+      className = "",
       ...props
     },
     ref
@@ -48,7 +49,7 @@ export const Text = React.forwardRef(
       as,
       {
         ...props,
-        className: `${classes} ${props.className}`,
+        className: `${classes} ${className}`,
         ref: ref,
       },
       children

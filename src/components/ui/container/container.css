@@ -4,7 +4,13 @@
   height: 100%;
   width: 100%;
   max-width: var(--container-maxwidth);
-  padding: 0 var(--container-padding);
+  padding: 0 calc(var(--container-padding) * 0.5);
+}
+
+@media (min-width: 980px){
+  .container{
+    padding: 0 var(--container-padding);
+  }
 }
 .container--fluid{
   max-width: 100%;
