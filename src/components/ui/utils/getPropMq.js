@@ -8,7 +8,7 @@ const trimSeparator = (str) => {
 
 const splitPropByMq = (str) => {
   if (typeof str !== "string") {
-    str = str.toString()
+    str = str?.toString()
   }
   return trimSeparator(str)
     .split("|")
@@ -16,6 +16,7 @@ const splitPropByMq = (str) => {
 }
 
 export const checkProp = (prop, mq) => {
+  if (typeof prop !== 'string') return;
   return splitPropByMq(prop)
     .map((e) => {
       if (typeof e === "string") {
