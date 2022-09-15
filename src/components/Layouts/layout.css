@@ -1,6 +1,7 @@
 :root {
   --color-dark-text: rgb(29, 29, 29);
   --color-light-text: rgb(233, 230, 230);
+  --color-body: #0d0d0d;
 
   --color-primary-1: #DCCA86;
   --color-primary-2: #A09462;
@@ -69,12 +70,13 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
+  color: var(--color-light-text);
   font-family: sans-serif;
   font-family: var(--font-sans);
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background: var(--color-body);
 }
 a {
   background-color: transparent;

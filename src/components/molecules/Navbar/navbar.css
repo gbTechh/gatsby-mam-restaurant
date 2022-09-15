@@ -18,9 +18,6 @@
   align-items: center;
 }
 
-.app__navbar-logo img {
-  width: 150px;
-}
 
 .app__navbar-links {
   flex: 1;
@@ -129,9 +126,5 @@
 
   .app__navbar-login {
       display: none;
-  }
-
-  .app__navbar-logo img {
-      width: 110px;
   }
 }

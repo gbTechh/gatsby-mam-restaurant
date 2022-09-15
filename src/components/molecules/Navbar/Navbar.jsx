@@ -1,14 +1,21 @@
 import React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+
+import { useLogo } from "../../../hooks"
 import { ItemNavbar } from "../../atoms"
 
 import "./navbar.css"
 
 export const Navbar = () => {
+  const logo = useLogo()
   const [toggleMenu, setToggleMenu] = React.useState(false)
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src="" alt="app__logo" />
+        <Link to="/">
+          <GatsbyImage image={getImage(logo)} alt="mam-restaurant" />
+        </Link>
       </div>
       <ul className="app__navbar-links">
         <ItemNavbar slug="home">Home</ItemNavbar>
