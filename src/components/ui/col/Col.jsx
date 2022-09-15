@@ -8,28 +8,29 @@ export const Col = React.forwardRef(
   (
     {
       children,
-      span,
       align = "flex-start",
       justify = "flex-start",
       wrap = "nowrap",
+      col: span,
       gap,
+      offset,
       className = "",
       as = "div",
       ...props
     },
     ref
   ) => {
-    const col = React.createElement(
+    const column = React.createElement(
       as,
       {
         ...props,
-        className: `${classes({ gap, span })} ${className}`,
+        className: `${classes({ gap, span, offset })} ${className}`,
         ref: ref,
       },
       children
     )
 
-    return col
+    return column
   }
 )
 

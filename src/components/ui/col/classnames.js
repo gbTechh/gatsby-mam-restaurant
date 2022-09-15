@@ -1,9 +1,8 @@
 import classNames from "classnames"
 import { checkProp } from "../utils"
 
-export const classes = ({ gap, span }) => {
+export const classes = ({ gap, span, offset }) => {
 
-  console.log('CLASSES', checkProp(gap, 'm'))
   const cls = classNames(
     "col",
     { "col--gap-0": checkProp(gap, 'm') === "0" },
@@ -17,7 +16,6 @@ export const classes = ({ gap, span }) => {
     { "col--gap-8": checkProp(gap, 'm') === "8" },
     { "col--gap-9": checkProp(gap, 'm') === "9" },
     { "col--gap-10": checkProp(gap, 'm') === "10" },
-
     { "mqt-col--gap-0": checkProp(gap, 't') === "0" },
     { "mqt-col--gap-1": checkProp(gap, 't') === "1" },
     { "mqt-col--gap-2": checkProp(gap, 't') === "2" },
@@ -29,7 +27,6 @@ export const classes = ({ gap, span }) => {
     { "mqt-col--gap-8": checkProp(gap, 't') === "8" },
     { "mqt-col--gap-9": checkProp(gap, 't') === "9" },
     { "mqt-col--gap-10": checkProp(gap, 't') === "10" },
-
     { "mqd-col--gap-0": checkProp(gap, 'd') === "0" },
     { "mqd-col--gap-1": checkProp(gap, 'd') === "1" },
     { "mqd-col--gap-2": checkProp(gap, 'd') === "2" },
@@ -55,7 +52,6 @@ export const classes = ({ gap, span }) => {
     { "col--span-10": checkProp(span, 'm') === "10" },
     { "col--span-11": checkProp(span, 'm') === "11" },
     { "col--span-12": checkProp(span, 'm') === "12" },
-
     { "mqt-col--span-0": checkProp(span, 't') === "0" },
     { "mqt-col--span-1": checkProp(span, 't') === "1" },
     { "mqt-col--span-2": checkProp(span, 't') === "2" },
@@ -69,7 +65,6 @@ export const classes = ({ gap, span }) => {
     { "mqt-col--span-10": checkProp(span, 't') === "10" },
     { "mqt-col--span-11": checkProp(span, 't') === "11" },
     { "mqt-col--span-12": checkProp(span, 't') === "12" },
-
     { "mqd-col--span-0": checkProp(span, 'd') === "0" },
     { "mqd-col--span-1": checkProp(span, 'd') === "1" },
     { "mqd-col--span-2": checkProp(span, 'd') === "2" },
@@ -83,6 +78,46 @@ export const classes = ({ gap, span }) => {
     { "mqd-col--span-10": checkProp(span, 'd') === "10" },
     { "mqd-col--span-11": checkProp(span, 'd') === "11" },
     { "mqd-col--span-12": checkProp(span, 'd') === "12" },
+
+    { "col--offset-0": checkProp(offset, 'm') === "0" },
+    { "col--offset-1": checkProp(offset, 'm') === "1" },
+    { "col--offset-2": checkProp(offset, 'm') === "2" },
+    { "col--offset-3": checkProp(offset, 'm') === "3" },
+    { "col--offset-4": checkProp(offset, 'm') === "4" },
+    { "col--offset-5": checkProp(offset, 'm') === "5" },
+    { "col--offset-6": checkProp(offset, 'm') === "6" },
+    { "col--offset-7": checkProp(offset, 'm') === "7" },
+    { "col--offset-8": checkProp(offset, 'm') === "8" },
+    { "col--offset-9": checkProp(offset, 'm') === "9" },
+    { "col--offset-10": checkProp(offset, 'm') === "10" },
+    { "col--offset-11": checkProp(offset, 'm') === "11" },
+    { "col--offset-12": checkProp(offset, 'm') === "12" },
+    { "mqt-col--offset-0": checkProp(offset, 't') === "0" },
+    { "mqt-col--offset-1": checkProp(offset, 't') === "1" },
+    { "mqt-col--offset-2": checkProp(offset, 't') === "2" },
+    { "mqt-col--offset-3": checkProp(offset, 't') === "3" },
+    { "mqt-col--offset-4": checkProp(offset, 't') === "4" },
+    { "mqt-col--offset-5": checkProp(offset, 't') === "5" },
+    { "mqt-col--offset-6": checkProp(offset, 't') === "6" },
+    { "mqt-col--offset-7": checkProp(offset, 't') === "7" },
+    { "mqt-col--offset-8": checkProp(offset, 't') === "8" },
+    { "mqt-col--offset-9": checkProp(offset, 't') === "9" },
+    { "mqt-col--offset-10": checkProp(offset, 't') === "10" },
+    { "mqt-col--offset-11": checkProp(offset, 't') === "11" },
+    { "mqt-col--offset-12": checkProp(offset, 't') === "12" },
+    { "mqd-col--offset-0": checkProp(offset, 'd') === "0" },
+    { "mqd-col--offset-1": checkProp(offset, 'd') === "1" },
+    { "mqd-col--offset-2": checkProp(offset, 'd') === "2" },
+    { "mqd-col--offset-3": checkProp(offset, 'd') === "3" },
+    { "mqd-col--offset-4": checkProp(offset, 'd') === "4" },
+    { "mqd-col--offset-5": checkProp(offset, 'd') === "5" },
+    { "mqd-col--offset-6": checkProp(offset, 'd') === "6" },
+    { "mqd-col--offset-7": checkProp(offset, 'd') === "7" },
+    { "mqd-col--offset-8": checkProp(offset, 'd') === "8" },
+    { "mqd-col--offset-9": checkProp(offset, 'd') === "9" },
+    { "mqd-col--offset-10": checkProp(offset, 'd') === "10" },
+    { "mqd-col--offset-11": checkProp(offset, 'd') === "11" },
+    { "mqd-col--offset-12": checkProp(offset, 'd') === "12" },
   )
 
   return cls
