@@ -3,7 +3,6 @@ import { checkProp } from "../utils"
 
 export const classes = ({ gap, align, justify, wrap }) => {
 
-  console.log('CLASSES', checkProp(gap, 'm'))
   const cls = classNames(
     "row",
     { "row--align-center": align === "center" },
