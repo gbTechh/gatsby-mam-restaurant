@@ -19,6 +19,18 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-vanilla-extract",
     {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        auth: {
+          htaccess: {
+            username: process.env.HTTPBASICAUTH_USERNAME,
+            password: process.env.HTTPBASICAUTH_PASSWORD,
+          }
+        },
+        url: 'https://s5042771.saturnwp.link/graphql',
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "Gatsby Starter WordPress Homepage",
@@ -32,9 +44,4 @@ module.exports = {
     },
   ],
 }
-/*{
-      resolve: "gatsby-source-wordpress",
-      options: {
-        url: process.env.WPGRAPHQL_URL,
-      },
-    },*/
+/*,*/
