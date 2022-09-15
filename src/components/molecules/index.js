@@ -1,3 +1,3 @@
 export * from './Seo/Seo'
-export * from './Header/Header'
+export * from './HeaderParallax/HeaderParallax'
 export * from './Navbar/Navbar'
