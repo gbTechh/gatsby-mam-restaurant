@@ -11,12 +11,12 @@ export default function Components() {
   return (
     <LayoutHome >
       <Button
-        size='sm'
+        size='full'
         className='botoncito'
         color='secondary1'
-        br='full'
+        br='sm'
         onClick={handleClick}
-      >Boton 1</Button>
+      >Botoncito 1</Button>
       <Button
         size='md'
         className='botoncito'
