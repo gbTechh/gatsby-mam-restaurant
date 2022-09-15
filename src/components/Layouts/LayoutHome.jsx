@@ -8,16 +8,19 @@ export const LayoutHome = ({ title = "", description, children }) => {
   return (
     <>
       <Seo title={title} description={description} />
-      <Container>
+      <Container pd="0" fluid>
         <Navbar />
         <HeaderParallax />
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        ></footer>
+        <Container>
+          <main>{children}</main>
+
+          <footer
+            style={{
+              marginTop: `var(--space-5)`,
+              fontSize: `var(--font-sm)`,
+            }}
+          ></footer>
+        </Container>
       </Container>
     </>
   )
