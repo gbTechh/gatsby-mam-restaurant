@@ -33,27 +33,27 @@
 /**SIZEE**/
 .text--h1{
   font-size: var(--font-h1);
-  line-height: calc(var(--font-h1) - 2px);
+  line-height: calc(var(--font-h1) + 2px);
 }
 .text--h2{
   font-size: var(--font-h2);
-  line-height: calc(var(--font-h2) - 2px);
+  line-height: calc(var(--font-h2) + 2px);
 }
 .text--h3{
   font-size: var(--font-h3);
-  line-height: calc(var(--font-h3) - 2px);
+  line-height: calc(var(--font-h3) + 2px);
 }
 .text--h4{
   font-size: var(--font-h4);
-  line-height: calc(var(--font-h4) - 2px);
+  line-height: calc(var(--font-h4) + 2px);
 }
 .text--base{
   font-size: var(--font-base);
-  line-height: calc(var(--font-base) - 1px);
+  line-height: calc(var(--font-base) + 6px);
 }
 .text--small{
   font-size: var(--font-small);
-  line-height: calc(var(--font-small) - 1px);
+  line-height: calc(var(--font-small) + 6px);
 }
 /**FONT WEIGHT*/
 .text--w-head{
