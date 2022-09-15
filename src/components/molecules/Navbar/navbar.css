@@ -7,9 +7,10 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
   padding: 1rem var(--container-padding);
   max-width: var(--container-maxwidth);
+  z-index:99;
+  background:var(--color-navbar);
 }
 
 .app__navbar-logo {
