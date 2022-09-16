@@ -16,9 +16,7 @@ export const HeaderParallax = ({ children, ...props }) => {
   const { imageParallax, imageParallaxMobil } = useImageHeroParallax()
 
   const [offset, setOffset] = useState()
-  const [imgParallax, setImgParallax] = useState(
-    window.screen.width <= 760 && imageParallaxMobil
-  )
+  const [imgParallax, setImgParallax] = useState()
   const handleScroll = () => setOffset(window.pageYOffset)
 
   useEffect(() => {
@@ -35,6 +33,10 @@ export const HeaderParallax = ({ children, ...props }) => {
       setImgParallax(imageParallax)
     }
   }
+
+  useEffect(() => {
+    setImgParallax(window.screen.width <= 760 && imageParallaxMobil)
+  }, [])
 
   useEffect(() => {
     window.addEventListener("resize", changeParallaxMQuery)
