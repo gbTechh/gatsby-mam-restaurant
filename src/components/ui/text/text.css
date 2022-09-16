@@ -31,29 +31,96 @@
   color: var(--color-error-2);
 }
 /**SIZEE**/
+.text--big{ 
+  font-size: calc(var(--font-big) - 20px);
+  line-height: calc(var(--font-big) + 2px);
+}
+
+@media(min-width: 360px){
+  .text--big{
+    font-size: calc(var(--font-big) - 5px);
+    line-height: calc(var(--font-big) + 2px);
+  }
+}
+@media(min-width: 760px){
+  .text--big{
+    font-size: var(--font-big);
+    line-height: calc(var(--font-big) + 2px);
+  }
+}
+@media(min-width: 1024px){
+  .text--big{
+    font-size: calc(var(--font-big) + 25px);
+    line-height: calc(var(--font-big) + 29px);
+    font-family: var(--font-head);
+  }
+}
+@media(min-width: 2024px){
+  .text--big{
+    font-size: calc(var(--font-big) + 45px);
+    line-height: calc(var(--font-big) + 45 + 35px);
+    font-family: var(--font-head);
+  }
+}
 .text--h1{
   font-size: var(--font-h1);
   line-height: calc(var(--font-h1) + 2px);
+  font-family: var(--font-head);
+}
+@media(min-width: 360px){
+  .text--h1{
+    font-size: calc(var(--font-h1) - 5px);
+    line-height: calc(var(--font-h1) + 2px);
+  }
+}
+@media(min-width: 760px){
+  .text--h1{
+    font-size: var(--font-h1);
+    line-height: calc(var(--font-h1) + 2px);
+  }
+}
+@media(min-width: 1024px){
+  .text--h1{
+    font-size: calc(var(--font-h1) + 20px);
+    line-height: calc(var(--font-h1) + 29px);  
+  }
+}
+@media(min-width: 2024px){
+  .text--h1{
+    font-size: calc(var(--font-h1) + 35px);
+    line-height: calc(var(--font-h1) + 35 + 35px);  
+  }
 }
 .text--h2{
   font-size: var(--font-h2);
   line-height: calc(var(--font-h2) + 2px);
+  font-family: var(--font-head);
 }
 .text--h3{
   font-size: var(--font-h3);
   line-height: calc(var(--font-h3) + 2px);
+  font-family: var(--font-head);
 }
 .text--h4{
   font-size: var(--font-h4);
   line-height: calc(var(--font-h4) + 2px);
+  font-family: var(--font-head);
 }
 .text--base{
   font-size: var(--font-base);
-  line-height: calc(var(--font-base) + 6px);
+  line-height: calc(var(--font-base) + 17px);
+  font-family: var(--font-body);
+}
+@media(min-width: 2024px){
+  .text--base{
+    font-size: calc(var(--font-base) + 10px);
+    line-height: calc(var(--font-base) + 25px); 
+  }
 }
 .text--small{
   font-size: var(--font-small);
   line-height: calc(var(--font-small) + 6px);
+  font-family: var(--font-body);
 }
 /**FONT WEIGHT*/
 .text--w-head{
@@ -86,4 +153,11 @@
 }
 .text--right{
   text-align: right;
+}
+/**FONT*/
+.text--font-head{
+  font-family: var(--font-head);
+}
+.text--font-base{
+  font-family: var(--font-body);
 }

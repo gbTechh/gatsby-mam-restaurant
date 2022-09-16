@@ -232,7 +232,7 @@
     margin-bottom: calc( (var(--spacing) * 10) / 2);
   }
 }
-@media (min-width: 660px){
+@media (min-width: 960px){
   .mqd-spacer--y-0{
     margin-top: calc( (var(--spacing) * 0) / 2);
     margin-bottom: calc( (var(--spacing) * 0) / 2);

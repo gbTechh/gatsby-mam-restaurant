@@ -9,7 +9,7 @@ export const useImageHeroParallax = () => {
         node {        
           homeAcf {
             imageParallax{
-              gatsbyImage(width:1800, height:1000)
+              gatsbyImage(width:2200, height:1000)
             }   
           }
         }

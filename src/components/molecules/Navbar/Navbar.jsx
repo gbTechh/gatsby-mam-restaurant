@@ -19,7 +19,7 @@ export const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         <ItemNavbar slug="home">Home</ItemNavbar>
-        <ItemNavbar slug="about-us">About us</ItemNavbar>
+        <ItemNavbar slug="aboutus">About us</ItemNavbar>
         <ItemNavbar slug="drinks">Drinks</ItemNavbar>
         <ItemNavbar slug="menu">Menu</ItemNavbar>
         <ItemNavbar slug="chef">Chef</ItemNavbar>

@@ -9,6 +9,8 @@
   width:max-content;
   min-width:100px;
   max-width: 300px;
+  font-family: var(--font-base);
+  padding: calc(var(--spacing) * 1) 0;
 }
 .button:hover{
   
@@ -102,6 +104,28 @@
   height: 40px;
   padding: 0 calc(var(--spacing) * 4);
 }
+@media(min-width:2024px){
+  .button--sm{
+    height: 60px;   
+    padding: 0 calc(var(--spacing) * 4);
+  }
+  .button--md{
+    height: 60px;   
+    padding: 0 calc(var(--spacing) * 5);
+  }
+  .button--l{
+    height: 60px;  
+    padding: 0 calc(var(--spacing) * 6);
+  }
+  .button--full{
+    height: 60px;  
+    padding: 0 calc(var(--spacing) * 6); 
+  }
+  .button--auto{
+    height: 60px;   
+    padding: 0 calc(var(--spacing) * 6);
+  }
+}
 /***BORDER RADIUS**/
 .button--br-0{
   border-radius: 0;
@@ -121,3 +145,6 @@
 .button--br-circle{
   border-radius: 50%;
 }
+
+
+@import '../text/text.css'

@@ -12,6 +12,8 @@ export const Button = React.forwardRef(
       textColor = "dark",
       size = "md",
       br = "md",
+      ff = "base",
+      fs = "base",
       as = "button",
       className = "",
       ...props
@@ -48,7 +50,16 @@ export const Button = React.forwardRef(
       { "button--br-md": br === "md" },
       { "button--br-l": br === "l" },
       { "button--br-full": br === "full" },
-      { "button--br-circle": br === "circle" }
+      { "button--br-circle": br === "circle" },
+      { "text--font-head": ff === "head" },
+      { "text--font-base": ff === "base" },
+      { "text--big": fs === "big" },
+      { "text--h1": fs === "h1" },
+      { "text--h2": fs === "h2" },
+      { "text--h3": fs === "h3" },
+      { "text--h4": fs === "h4" },
+      { "text--base": fs === "base" },
+      { "text--small": fs === "small" }
     )
     const button = React.createElement(
       as,

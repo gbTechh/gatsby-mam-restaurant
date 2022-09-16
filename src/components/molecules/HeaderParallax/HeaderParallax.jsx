@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 import { useEffect } from "react"
-import { useRef } from "react"
 import { useState } from "react"
 import { useGetDataHeader } from "../../../hooks"
 import { useImageHeroParallax } from "../../../hooks/useImageHeroParallax"
@@ -34,6 +33,12 @@ export const HeaderParallax = ({ children, ...props }) => {
       <GatsbyImage
         style={{
           transform: `translateY(-${offset * 0.03}%)`,
+          maxWidth: "100%",
+          width: "100%",
+        }}
+        imgStyle={{
+          maxWidth: "100%",
+          width: "100%",
         }}
         image={getImage(imageParallax)}
         alt="Mam restaurant"
@@ -44,31 +49,34 @@ export const HeaderParallax = ({ children, ...props }) => {
           <Col col="12">
             <Spacer x="0" />
             <Text align="left" color="secondary1" fw="strong">
-              {titleTextHeader}
-            </Text>
-          </Col>
-          <Spacer y="4" />
-          <Col col="12">
-            <Text size="h1" align="left" color="secondary1">
               {subtitleTextHeader}
             </Text>
           </Col>
           <Spacer y="4" />
           <Col col="12">
-            <Text align="left" color="secondary1">
+            <Text size="big" align="left" color="secondary1">
+              {titleTextHeader}
+            </Text>
+          </Col>
+          <Spacer y="4" />
+          <Col col="12">
+            <Text align="left" color="secondary1" fw="bquote">
               {shortDescriptionHeader}
             </Text>
           </Col>
         </Row>
+        <Spacer y="8" />
         <Row className="header-parallax__row-btns">
           <Col>
             <Link to="/#about-us">
-              <Button size="md">Explore now</Button>
+              <Button size="md" br="sm">
+                Explore now
+              </Button>
             </Link>
           </Col>
           <Col>
             <Link to="/">
-              <Button size="md" color="primary1" textColor="light">
+              <Button size="md" color="primary1" textColor="light" br="sm">
                 View Menu
               </Button>
             </Link>
