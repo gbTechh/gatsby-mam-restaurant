@@ -68,19 +68,24 @@ export const HeaderParallax = ({ children, ...props }) => {
           <Col col="12">
             <Spacer x="0" />
             <Text align="left" color="secondary1" fw="strong">
-              {subtitleTextHeader}
+              {/* {subtitleTextHeader} */}
             </Text>
           </Col>
           <Spacer y="4" />
           <Col col="12">
-            <Text size="big" align="left" color="secondary1">
+            <Text
+              size="h1"
+              align="left"
+              color="secondary1"
+              className="header-parallax__title"
+            >
               {titleTextHeader}
             </Text>
           </Col>
           <Spacer y="4" />
           <Col col="12">
             <Text align="left" color="secondary1" fw="bquote">
-              {shortDescriptionHeader}
+              {/* {shortDescriptionHeader} */}
             </Text>
           </Col>
         </Row>
