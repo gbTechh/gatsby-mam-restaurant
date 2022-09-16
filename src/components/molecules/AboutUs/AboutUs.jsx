@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react"
-import { useInView } from "react-intersection-observer"
 
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import BackgroundImage from "gatsby-background-image"
