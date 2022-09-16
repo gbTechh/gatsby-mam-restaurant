@@ -27,7 +27,7 @@
   position: fixed;
 }
 .header-parallax__title{
-  max-width: 11ch;
+  max-width: 14ch;
 }
 
 .header-parallax__text-container{
@@ -40,11 +40,7 @@
   justify-content: center;
   flex-direction: column;
 }
-@media(min-width: 560px){
-  .header-parallax__text-container{
-    grid-column:2/7;
-  }
-}
+
 @media(min-width: 760px){
   .header-parallax__text-container{
     grid-row:3/10;

@@ -35,7 +35,9 @@ export const HeaderParallax = ({ children, ...props }) => {
   }
 
   useEffect(() => {
-    setImgParallax(window.screen.width <= 760 && imageParallaxMobil)
+    setImgParallax(
+      window.screen.width <= 760 ? imageParallaxMobil : imageParallax
+    )
   }, [])
 
   useEffect(() => {
@@ -67,7 +69,7 @@ export const HeaderParallax = ({ children, ...props }) => {
         <Row wrap="wrap" className="header-parallax__row">
           <Col col="12">
             <Spacer x="0" />
-            <Text align="left" color="secondary1" fw="strong">
+            <Text align="left" color="secondary1" fw="strong" ff="head">
               {/* {subtitleTextHeader} */}
             </Text>
           </Col>
@@ -78,6 +80,8 @@ export const HeaderParallax = ({ children, ...props }) => {
               align="left"
               color="secondary1"
               className="header-parallax__title"
+              ff="head"
+              fw="strong"
             >
               {titleTextHeader}
             </Text>
