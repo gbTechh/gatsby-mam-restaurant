@@ -31,12 +31,13 @@ export const useObserver = (options) => {
   const [elements, setElements] = useState([])
 
   const [entries, setEntries] = useState([])
-  const observer = useRef(new IntersectionObserver(observedEntries => {
-    console.log({ observedEntries })
-    setEntries(observedEntries)
-  }, options))
 
+  const observer = useRef()
   useEffect(() => {
+
+    observer.current = new IntersectionObserver(observedEntries => {
+      setEntries(observedEntries)
+    }, options)
 
     const { current: currentObserver } = observer
     currentObserver.disconnect();
