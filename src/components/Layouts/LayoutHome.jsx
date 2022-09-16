@@ -11,16 +11,15 @@ export const LayoutHome = ({ title = "", description, children }) => {
       <Container pd="0" fluid>
         <Navbar />
         <HeaderParallax />
-        <Container>
-          <main>{children}</main>
 
-          <footer
-            style={{
-              marginTop: `var(--space-5)`,
-              fontSize: `var(--font-sm)`,
-            }}
-          ></footer>
-        </Container>
+        <main className="background-color">{children}</main>
+
+        <footer
+          style={{
+            marginTop: `var(--space-5)`,
+            fontSize: `var(--font-sm)`,
+          }}
+        ></footer>
       </Container>
     </>
   )

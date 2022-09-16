@@ -5,7 +5,7 @@
   --color-navbar: #0d0d0dC9;
 
   --color-primary-1: #A36B3A;
-  --color-primary-2: #A09462;
+  --color-primary-2: #DCCA86;
 
   --color-secondary-1: #F5EFDB;
   --color-secondary-2: #848484;
@@ -29,11 +29,12 @@
   --border-radius-full: 999.99px;
   --border-radius-circle: 50%;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+  --font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-h1: 40px;
+  --font-head: 'Raleway', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-big: 64px;
+  --font-h1: 55px;
   --font-h2: 36px;
   --font-h3: 27px;
   --font-h4: 21px;
@@ -59,7 +60,7 @@
   --space-6: calc(var(--spacing) * 14);
 
   --container-maxwidth: 1800px;
-  --container-padding: calc(var(--spacing) * 5);
+  --container-padding: calc(var(--spacing) * 25);
 }
 html {
   -webkit-text-size-adjust: 100%;
@@ -161,7 +162,7 @@ dd,
 p {
   margin: 0;
   padding: 0;
-  margin-bottom: var(--space-4);
+ 
 }
 ul,
 ol {
@@ -352,4 +353,9 @@ body {
   -webkit-font-smoothing: antialiased;
   /* opcional */
   -moz-osx-font-smoothing: grayscale; 
+}
+/**UTILS CLASES**/
+
+.background-color{
+  background: var(--color-body);
 }
