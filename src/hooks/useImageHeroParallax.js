@@ -11,6 +11,9 @@ export const useImageHeroParallax = () => {
             imageParallax{
               gatsbyImage(width:2200, height:1000)
             }   
+            imageParallaxMobil{
+              gatsbyImage(width:760)
+            }
           }
         }
       }
@@ -19,7 +22,7 @@ export const useImageHeroParallax = () => {
   `
   );
 
-  const dataSource = data.allWpPage.edges[0].node.homeAcf.imageParallax;
+  const dataSource = data.allWpPage.edges[0].node.homeAcf;
 
 
   return dataSource;

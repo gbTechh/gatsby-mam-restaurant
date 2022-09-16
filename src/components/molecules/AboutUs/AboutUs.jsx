@@ -53,7 +53,6 @@ export const AboutUs = ({ children, ...props }) => {
     })
   }, [entries, observer])
 
-  console.log({ isVisible })
   return (
     <Container fluid pd="0" className="about-us" as="section" id={slug}>
       <BackgroundImage

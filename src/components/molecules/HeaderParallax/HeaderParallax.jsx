@@ -13,17 +13,34 @@ import "./header.css"
 export const HeaderParallax = ({ children, ...props }) => {
   const { titleTextHeader, subtitleTextHeader, shortDescriptionHeader } =
     useGetDataHeader()
-  const imageParallax = useImageHeroParallax()
+  const { imageParallax, imageParallaxMobil } = useImageHeroParallax()
 
   const [offset, setOffset] = useState()
-
+  const [imgParallax, setImgParallax] = useState(
+    window.screen.width <= 760 && imageParallaxMobil
+  )
   const handleScroll = () => setOffset(window.pageYOffset)
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
-
     return () => {
       window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const changeParallaxMQuery = (e) => {
+    if (e.currentTarget.screen.width <= 760) {
+      setImgParallax(imageParallaxMobil)
+    } else {
+      setImgParallax(imageParallax)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", changeParallaxMQuery)
+
+    return () => {
+      window.removeEventListener("resize", changeParallaxMQuery)
     }
   }, [])
 
@@ -40,7 +57,7 @@ export const HeaderParallax = ({ children, ...props }) => {
           maxWidth: "100%",
           width: "100%",
         }}
-        image={getImage(imageParallax)}
+        image={getImage(imgParallax)}
         alt="Mam restaurant"
         className="header-parallax__image"
       />
