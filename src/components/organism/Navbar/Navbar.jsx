@@ -20,9 +20,10 @@ export const Navbar = () => {
       <ul className="app__navbar-links">
         <ItemNavbar slug="home">Home</ItemNavbar>
         <ItemNavbar slug="aboutus">About us</ItemNavbar>
-        <ItemNavbar slug="drinks">Drinks</ItemNavbar>
         <ItemNavbar slug="menu">Menu</ItemNavbar>
+        <ItemNavbar slug="drinks">Drinks</ItemNavbar>
         <ItemNavbar slug="chef">Chef</ItemNavbar>
+        <ItemNavbar slug="laurlels">Laurels</ItemNavbar>
         <ItemNavbar slug="gallery">Gallery</ItemNavbar>
         <ItemNavbar slug="contact">Contact</ItemNavbar>
       </ul>
