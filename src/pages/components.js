@@ -1,6 +1,6 @@
 import * as React from "react"
 import { LayoutHome } from "../components"
-import { Button, Text } from "../components/ui"
+import { Button, Col, Container, Row, Text } from "../components/ui"
 
 
 export default function Components() {
@@ -11,12 +11,12 @@ export default function Components() {
   return (
     <LayoutHome >
       <Button
-        size='sm'
+        size='full'
         className='botoncito'
         color='secondary1'
-        br='full'
+        br='sm'
         onClick={handleClick}
-      >Boton 1</Button>
+      >Botoncito 1</Button>
       <Button
         size='md'
         className='botoncito'
@@ -55,6 +55,19 @@ export default function Components() {
       <Text size='h4' color='error2'>Texto aqui</Text>
       <Text size='base'>Texto aqui</Text>
       <Text size='small'>Texto aqui</Text>
+      <br></br>
+      <br></br>
+      <br></br>
+      <Container className='pd-0'>
+        <Row gap='7|t:2|d:4' wrap='wrap' align='center' justify='center'>
+          <Col span='2|t:4|d:3'><Button size='full' color='primary1'>btn1</Button></Col>
+          <Col span='4|t:2|d:2'><Button size='full' color='primary1'>btn1</Button></Col>
+          <Col span='3|t:3|d:4'><Button size='full' color='primary1'>btn1</Button></Col>
+          <Col span='3|t:3|d:3'><Button size='full' color='primary1'>btn1</Button></Col>
+
+        </Row>
+
+      </Container>
     </LayoutHome>
   )
 }

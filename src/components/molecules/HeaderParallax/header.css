@@ -1,0 +1,71 @@
+.header-parallax{
+  display:grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+}
+
+.header-parallax__opacity{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:1;
+  grid-column: 1/11;
+  grid-row: 1/13;
+  background: linear-gradient(95deg, rgba(0, 0, 0, 0.6) 8.75%, rgba(0, 0, 0, 0.49) 48.03%, rgba(0, 0, 0, 0.1372) 59.8%, rgba(0, 0, 0, 0.0049) 89.52%);
+}
+.header-parallax__image {
+  min-height: 600px;
+  height: 100vh;
+  grid-column: 1/11;
+  grid-row: 1/13;
+  position: fixed;
+}
+.header-parallax__title{
+  max-width: 14ch;
+}
+
+.header-parallax__text-container{
+  z-index:2;
+  position: relative;
+  grid-column:2/9;
+  grid-row:3/11;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media(min-width: 760px){
+  .header-parallax__text-container{
+    grid-row:3/10;
+  }
+}
+@media(min-width: 960px){
+  .header-parallax__text-container{
+    grid-row:3/9;
+  }
+}
+@media(min-width: 1560px){
+  .header-parallax__text-container{
+    grid-column:2/6;
+  }
+}
+
+.header-parallax__row{
+  flex-direction: column;
+
+}
+.header-parallax__row-btns{
+  flex-direction: column;
+}
+@media(min-width:960px){
+  .header-parallax__row-btns{
+    flex-direction: row;
+  }
+}

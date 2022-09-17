@@ -1,0 +1,227 @@
+@import '../general-styles/margin.css';
+
+.row{
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 0px;
+}
+.row--align-center{
+  align-items: center;
+}
+.row--align-flex-start{
+  align-items: flex-start;
+}
+.row--align-flex-end{
+  align-items: flex-end;
+}
+.row--align-stretch{
+  align-items: stretch;
+}
+.row--align-baseline{
+  align-items: baseline;
+}
+/***JUSTIFY***/
+.row--justify-center{
+  justify-content: center;
+}
+.row--justify-flex-start{
+  justify-content: flex-start;
+}
+.row--justify-flex-end{
+  justify-content: flex-end;
+}
+.row--justify-stretch{
+  justify-content: stretch;
+}
+.row--justify-space-around{
+  justify-content: space-around;
+}
+.row--justify-space-between{
+  justify-content: space-between;
+}
+.row--justify-space-evenly{
+  justify-content: space-evenly;
+}
+/**WRAP**/
+.row--wrap{
+  flex-wrap: wrap;
+}
+.row--no-wrap{
+  flex-wrap: nowrap;
+}
+/**GAP**/
+.row--gap-0{
+  margin-top: calc(var(--spacing) * 0);
+  margin-left: calc(var(--spacing) * 0);
+  width: calc(100% + (var(--spacing) * 0));
+}
+.row--gap-1{
+  margin-top: calc(var(--spacing) * -1);
+  margin-left: calc(var(--spacing) * -1);
+  width: calc(100% + (var(--spacing) * 1));
+}
+.row--gap-2{
+  margin-top: calc(var(--spacing) * -2);
+  margin-left: calc(var(--spacing) * -2);
+  width: calc(100% + (var(--spacing) * 2));
+}
+.row--gap-3{
+  margin-top: calc(var(--spacing) * -3);
+  margin-left: calc(var(--spacing) * -3);
+  width: calc(100% + (var(--spacing) * 3));
+}
+.row--gap-4{
+  margin-top: calc(var(--spacing) * -4);
+  margin-left: calc(var(--spacing) * -4);
+  width: calc(100% + (var(--spacing) * 4));
+}
+.row--gap-5{
+  margin-top: calc(var(--spacing) * -5);
+  margin-left: calc(var(--spacing) * -5);
+  width: calc(100% + (var(--spacing) * 5));
+}
+.row--gap-6{
+  margin-top: calc(var(--spacing) * -6);
+  margin-left: calc(var(--spacing) * -6);
+  width: calc(100% + (var(--spacing) * 6));
+}
+.row--gap-7{
+  margin-top: calc(var(--spacing) * -7);
+  margin-left: calc(var(--spacing) * -7);
+  width: calc(100% + (var(--spacing) * 7));
+}
+.row--gap-8{
+  margin-top: calc(var(--spacing) * -8);
+  margin-left: calc(var(--spacing) * -8);
+  width: calc(100% + (var(--spacing) * 8));
+}
+.row--gap-9{
+  margin-top: calc(var(--spacing) * -9);
+  margin-left: calc(var(--spacing) * -9);
+  width: calc(100% + (var(--spacing) * 9));
+}
+.row--gap-10{
+  margin-top: calc(var(--spacing) * -10);
+  margin-left: calc(var(--spacing) * -10);
+  width: calc(100% + (var(--spacing) * 10));
+}
+@media(min-width: 760px){
+  .mqt-row--gap-0{
+    margin-top: calc(var(--spacing) * 0);
+    margin-left: calc(var(--spacing) * 0);
+    width: calc(100% + (var(--spacing) * 0));
+  }
+  .mqt-row--gap-1{
+    margin-top: calc(var(--spacing) * -1);
+    margin-left: calc(var(--spacing) * -1);
+    width: calc(100% + (var(--spacing) * 1));
+  }
+  .mqt-row--gap-2{
+    margin-top: calc(var(--spacing) * -2);
+    margin-left: calc(var(--spacing) * -2);
+    width: calc(100% + (var(--spacing) * 2));
+  }
+  .mqt-row--gap-3{
+    margin-top: calc(var(--spacing) * -3);
+    margin-left: calc(var(--spacing) * -3);
+    width: calc(100% + (var(--spacing) * 3));
+  }
+  .mqt-row--gap-4{
+    margin-top: calc(var(--spacing) * -4);
+    margin-left: calc(var(--spacing) * -4);
+    width: calc(100% + (var(--spacing) * 4));
+  }
+  .mqt-row--gap-5{
+    margin-top: calc(var(--spacing) * -5);
+    margin-left: calc(var(--spacing) * -5);
+    width: calc(100% + (var(--spacing) * 5));
+  }
+  .mqt-row--gap-6{
+    margin-top: calc(var(--spacing) * -6);
+    margin-left: calc(var(--spacing) * -6);
+    width: calc(100% + (var(--spacing) * 6));
+  }
+  .mqt-row--gap-7{
+    margin-top: calc(var(--spacing) * -7);
+    margin-left: calc(var(--spacing) * -7);
+    width: calc(100% + (var(--spacing) * 7));
+  }
+  .mqt-row--gap-8{
+    margin-top: calc(var(--spacing) * -8);
+    margin-left: calc(var(--spacing) * -8);
+    width: calc(100% + (var(--spacing) * 8));
+  }
+  .mqt-row--gap-9{
+    margin-top: calc(var(--spacing) * -9);
+    margin-left: calc(var(--spacing) * -9);
+    width: calc(100% + (var(--spacing) * 9));
+  }
+  .mqt-row--gap-10{
+    margin-top: calc(var(--spacing) * -10);
+    margin-left: calc(var(--spacing) * -10);
+    width: calc(100% + (var(--spacing) * 10));
+  }
+}
+@media(min-width: 960px){
+  .mqd-row--gap-0{
+    margin-top: calc(var(--spacing) * 0);
+    margin-left: calc(var(--spacing) * 0);
+    width: calc(100% + (var(--spacing) * 0));
+  }
+  .mqd-row--gap-1{
+    margin-top: calc(var(--spacing) * -1);
+    margin-left: calc(var(--spacing) * -1);
+    width: calc(100% + (var(--spacing) * 1));
+  }
+  .mqd-row--gap-2{
+    margin-top: calc(var(--spacing) * -2);
+    margin-left: calc(var(--spacing) * -2);
+    width: calc(100% + (var(--spacing) * 2));
+  }
+  .mqd-row--gap-3{
+    margin-top: calc(var(--spacing) * -3);
+    margin-left: calc(var(--spacing) * -3);
+    width: calc(100% + (var(--spacing) * 3));
+  }
+  .mqd-row--gap-4{
+    margin-top: calc(var(--spacing) * -4);
+    margin-left: calc(var(--spacing) * -4);
+    width: calc(100% + (var(--spacing) * 4));
+  }
+  .mqd-row--gap-5{
+    margin-top: calc(var(--spacing) * -5);
+    margin-left: calc(var(--spacing) * -5);
+    width: calc(100% + (var(--spacing) * 5));
+  }
+  .mqd-row--gap-6{
+    margin-top: calc(var(--spacing) * -6);
+    margin-left: calc(var(--spacing) * -6);
+    width: calc(100% + (var(--spacing) * 6));
+  }
+  .mqd-row--gap-7{
+    margin-top: calc(var(--spacing) * -7);
+    margin-left: calc(var(--spacing) * -7);
+    width: calc(100% + (var(--spacing) * 7));
+  }
+  .mqd-row--gap-8{
+    margin-top: calc(var(--spacing) * -8);
+    margin-left: calc(var(--spacing) * -8);
+    width: calc(100% + (var(--spacing) * 8));
+  }
+  .mqd-row--gap-9{
+    margin-top: calc(var(--spacing) * -9);
+    margin-left: calc(var(--spacing) * -9);
+    width: calc(100% + (var(--spacing) * 9));
+  }
+  .mqd-row--gap-10{
+    margin-top: calc(var(--spacing) * -10);
+    margin-left: calc(var(--spacing) * -10);
+    width: calc(100% + (var(--spacing) * 10));
+  }
+}
+
+
+@import '../general-styles/padding.css';

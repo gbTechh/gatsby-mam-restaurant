@@ -13,6 +13,7 @@ export const Text = React.forwardRef(
       as = "p",
       align = "center",
       fw = "base",
+      ff = "base",
       className = "",
       ...props
     },
@@ -28,6 +29,7 @@ export const Text = React.forwardRef(
       { "text--warning-2": color === "warning2" },
       { "text--error-1": color === "error1" },
       { "text--error-2": color === "error2" },
+      { "text--big": size === "big" },
       { "text--h1": size === "h1" },
       { "text--h2": size === "h2" },
       { "text--h3": size === "h3" },
@@ -43,7 +45,9 @@ export const Text = React.forwardRef(
       { "text--w-bquote": fw === "bquote" },
       { "text--w-base": fw === "base" },
       { "text--w-regular": fw === "regular" },
-      { "text--w-tiny": fw === "tiny" }
+      { "text--w-tiny": fw === "tiny" },
+      { "text--font-head": ff === "head" },
+      { "text--font-base": ff === "base" }
     )
     const text = React.createElement(
       as,
@@ -72,7 +76,7 @@ Text.propTypes = {
     "warning1",
     "warning2",
   ]),
-  size: PropTypes.oneOf(["h1", "h2", "h3", "h4", "base", "small"]),
+  size: PropTypes.oneOf(["big", "h1", "h2", "h3", "h4", "base", "small"]),
   align: PropTypes.oneOf(["center", "left", "right"]),
   fw: PropTypes.oneOf([
     "head",
