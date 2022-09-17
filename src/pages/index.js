@@ -6,7 +6,7 @@ export default function Homepage() {
 
   return (
     <LayoutHome title='Home Page'>
-      asdsa
+      Home
     </LayoutHome>
   )
 }
