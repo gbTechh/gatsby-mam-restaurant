@@ -1,9 +1,11 @@
 :root {
   --color-dark-text: rgb(29, 29, 29);
   --color-light-text: rgb(233, 230, 230);
+  --color-body: #0d0d0d;
+  --color-navbar: #0d0d0dC9;
 
-  --color-primary-1: #DCCA86;
-  --color-primary-2: #A09462;
+  --color-primary-1: #A36B3A;
+  --color-primary-2: #DCCA86;
 
   --color-secondary-1: #F5EFDB;
   --color-secondary-2: #848484;
@@ -19,6 +21,7 @@
 
 
   --spacing: 4px;
+  --spacing-value: 4;
   --border-radius-sm: var(--spacing);
   --border-radius-md: calc(var(--spacing) * 2);
   --border-radius-l: calc(var(--spacing) * 4);
@@ -26,11 +29,13 @@
   --border-radius-full: 999.99px;
   --border-radius-circle: 50%;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+  --font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  --font-h1: 40px;
+  /* --font-head: 'Raleway', sans-serif; */
+  --font-head: 'Aref Ruqaa Ink', serif;
+  --font-body: 'Open Sans', sans-serif;
+  --font-big: 64px;
+  --font-h1: 55px;
   --font-h2: 36px;
   --font-h3: 27px;
   --font-h4: 21px;
@@ -56,7 +61,7 @@
   --space-6: calc(var(--spacing) * 14);
 
   --container-maxwidth: 1800px;
-  --container-padding: calc(var(--spacing) * 5);
+  --container-padding: calc(var(--spacing) * 25);
 }
 html {
   -webkit-text-size-adjust: 100%;
@@ -69,12 +74,13 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
+  color: var(--color-light-text);
   font-family: sans-serif;
   font-family: var(--font-sans);
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background: var(--color-body);
 }
 a {
   background-color: transparent;
@@ -138,7 +144,7 @@ hr {
   height: 1px;
 }
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 *:before {
   box-sizing: inherit;
@@ -157,7 +163,7 @@ dd,
 p {
   margin: 0;
   padding: 0;
-  margin-bottom: var(--space-4);
+ 
 }
 ul,
 ol {
@@ -348,4 +354,9 @@ body {
   -webkit-font-smoothing: antialiased;
   /* opcional */
   -moz-osx-font-smoothing: grayscale; 
+}
+/**UTILS CLASES**/
+
+.background-color{
+  background: var(--color-body);
 }

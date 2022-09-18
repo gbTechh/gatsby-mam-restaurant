@@ -3,6 +3,7 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
+const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
@@ -12,33 +13,53 @@ module.exports = {
     description: "A Gatsby Starter for building homepages with WordPress",
   },
   plugins: [{
-      resolve: 'gatsby-source-wordpress',
-      options: {
-        "url": "https://s5042771.saturnwp.link/graphql",
-        auth: {
-            htaccess: {
-            username: process.env.HTTPBASICAUTH_USERNAME,
-            password: process.env.HTTPBASICAUTH_PASSWORD
-          }
+    resolve: 'gatsby-source-wordpress',
+    options: {
+      url: "https://s5042771.saturnwp.link/graphql",
+      auth: {
+        htaccess: {
+          username: process.env.HTTPBASICAUTH_USERNAME,
+          password: process.env.HTTPBASICAUTH_PASSWORD
         }
       }
+    }
+  },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `images`,
+      path: path.join(__dirname, `src`, `assets`),
     },
+  },
     "gatsby-plugin-sharp",
     "gatsby-plugin-image",
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-vanilla-extract",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Gatsby Starter WordPress Homepage",
-        short_name: "Gatsby",
-        start_url: "/",
-        // These can be imported once ESM support lands
-        background_color: "#ffffff",
-        theme_color: "#004ca3",
-        icon: "src/favicon.png",
+  {
+    resolve: "gatsby-source-wordpress",
+    options: {
+      auth: {
+        htaccess: {
+          username: process.env.HTTPBASICAUTH_USERNAME,
+          password: process.env.HTTPBASICAUTH_PASSWORD,
+        }
       },
+      url: 'https://s5042771.saturnwp.link/graphql',
+    }
+  },
+  {
+    resolve: "gatsby-plugin-manifest",
+    options: {
+      name: "Gatsby Starter WordPress Homepage",
+      short_name: "Gatsby",
+      start_url: "/",
+      // These can be imported once ESM support lands
+      background_color: "#ffffff",
+      theme_color: "#004ca3",
+      icon: "src/favicon.png",
     },
+  },
   ],
 }
+/*,*/

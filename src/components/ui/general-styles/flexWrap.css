@@ -1,0 +1,32 @@
+.mqt-flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-no-wrap{
+  flex-wrap: nowrap;
+}
+.flex-wrap-reverse{
+  flex-wrap: wrap-reverse;
+}
+
+@media (min-width: 760px){
+  .mqt-flex-wrap{
+    flex-wrap: wrap;
+  }
+  .mqt-flex-no-wrap{
+    flex-wrap: nowrap;
+  }
+  .mqt-flex-wrap-reverse{
+    flex-wrap: wrap-reverse;
+  }
+}
+@media (min-width: 960px){
+  .mqd-flex-wrap{
+    flex-wrap: wrap;
+  }
+  .mqd-flex-no-wrap{
+    flex-wrap: nowrap;
+  }
+  .mqd-flex-wrap-reverse{
+    flex-wrap: wrap-reverse;
+  }
+}
