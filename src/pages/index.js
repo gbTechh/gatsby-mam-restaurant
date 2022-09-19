@@ -5,8 +5,8 @@ import { AboutUs, LayoutHome } from "../components"
 export default function Homepage() {
 
   return (
-    <LayoutHome title='Home Page'>
-      <AboutUs />
+    <LayoutHome>
+      <AboutUs></AboutUs>
     </LayoutHome>
   )
 }

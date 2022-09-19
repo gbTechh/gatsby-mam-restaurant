@@ -2,7 +2,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import "./layout.css"
 import { Container } from "../ui"
-import { HeaderParallax, Navbar, Seo } from "../molecules"
+import { HeaderParallax, Navbar } from "../organism"
+import { Seo } from "../atoms"
 
 export const LayoutHome = ({ title = "", description, children }) => {
   return (

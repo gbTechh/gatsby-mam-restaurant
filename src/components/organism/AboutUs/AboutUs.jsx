@@ -74,6 +74,7 @@ export const AboutUs = ({ children, ...props }) => {
                 size="h1"
                 as="h2"
                 className="about-us__title-about"
+                ff="head"
               >
                 {aboutUs.title}
               </Text>
@@ -109,6 +110,7 @@ export const AboutUs = ({ children, ...props }) => {
                 size="h1"
                 as="h2"
                 className="about-us__title-history"
+                ff="head"
               >
                 {ourHistory.title}
               </Text>

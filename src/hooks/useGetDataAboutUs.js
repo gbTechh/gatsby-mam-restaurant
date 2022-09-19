@@ -22,7 +22,7 @@ export const useGetDataAboutUs = () => {
           }
           aboutus{   
             imagen{
-              gatsbyImage( height:600)
+              gatsbyImage( height:400)
             }
             ourHistory{
               title
