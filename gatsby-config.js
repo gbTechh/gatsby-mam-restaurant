@@ -15,7 +15,7 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      url: "https://s5042771.saturnwp.link/graphql",
+      url: "http://localhost/wp-mam-restaurant/?graphql=true",
       auth: {
         htaccess: {
           username: process.env.HTTPBASICAUTH_USERNAME,
@@ -45,7 +45,7 @@ module.exports = {
           password: process.env.HTTPBASICAUTH_PASSWORD,
         }
       },
-      url: 'https://s5042771.saturnwp.link/graphql',
+      url: 'http://localhost/wp-mam-restaurant/?graphql=true',
     }
   },
   {
