@@ -1,10 +1,10 @@
 import React from "react"
 
-import { SubHeading} from '../../molecules';
+import { SubHeading } from "../../molecules"
 // import { data, images } from '../../constants';
-import "./SpecialDrinks.css"
+import "./specialDrinks.css"
 
-export const  SpecialDrinks = () => (
+export const SpecialDrinks = () => (
   <div className="app__specialMenu flex__center section__padding" id="menu">
     <div className="app__specialMenu-title">
       <SubHeading title="Menu that fits your palatte" />
@@ -52,4 +52,3 @@ export const  SpecialDrinks = () => (
     </div>
   </div>
 )
-

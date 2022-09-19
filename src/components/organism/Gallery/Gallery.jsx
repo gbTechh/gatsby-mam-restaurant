@@ -1,14 +1,11 @@
 import React from "react"
-import {
-  BsArrowLeftShort,
-  BsArrowRightShort,
-} from "react-icons/bs"
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 
 // import { images } from "../../constants"
-import {SubHeading} from "../../molecules"
-import "./Gallery.css"
+import { SubHeading } from "../../molecules"
+import "./gallery.css"
 
-export const  Gallery = () => {
+export const Gallery = () => {
   const scrollRef = React.useRef(null)
 
   const scroll = (direction) => {

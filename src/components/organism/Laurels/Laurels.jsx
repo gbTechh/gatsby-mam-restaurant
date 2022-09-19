@@ -2,7 +2,7 @@ import React from "react"
 
 import { SubHeading } from "../../molecules"
 // import { images, data } from "../../constants"
-import "./Laurels.css"
+import "./laurels.css"
 
 // const AwardCard = ({ award: { imgUrl, title, subtitle } }) => (
 //   <div className="app__laurels_awards-card">
