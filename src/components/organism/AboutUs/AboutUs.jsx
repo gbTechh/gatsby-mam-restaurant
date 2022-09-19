@@ -7,12 +7,19 @@ import { useGetDataAboutUs, useObserver } from "../../../hooks"
 import { Container, Spacer, Text } from "../../ui"
 
 import "./aboutus.css"
+import { useImageMediaQuery } from "../../../hooks/useImageMediaQuery"
 
 export const AboutUs = ({ children, ...props }) => {
   const {
     slug,
     featuredImage,
-    aboutus: { imagen, aboutUs, ourHistory },
+    aboutus: {
+      imagen,
+      aboutUs,
+      ourHistory,
+      backgroundImageMobil,
+      backgroundImageDesktop,
+    },
   } = useGetDataAboutUs()
 
   const [offset, setOffset] = useState()
@@ -53,12 +60,18 @@ export const AboutUs = ({ children, ...props }) => {
     })
   }, [entries, observer])
 
+  const { image } = useImageMediaQuery({
+    imageMobil: backgroundImageMobil,
+    imageDesktop: backgroundImageDesktop,
+  })
+
+  console.log({ image })
   return (
     <Container fluid pd="0" className="about-us" as="section" id={slug}>
       <BackgroundImage
         Tag="div"
         className="about-us__bg-image"
-        fluid={featuredImage.node.localFile.childImageSharp.fluid}
+        fluid={image.localFile.childImageSharp.fluid}
         backgroundColor={`#040e18`}
       >
         <Container>

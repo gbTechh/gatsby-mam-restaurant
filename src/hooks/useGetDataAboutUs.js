@@ -9,17 +9,6 @@ export const useGetDataAboutUs = () => {
         node{
           title
           slug
-          featuredImage{
-            node{
-              localFile{
-                childImageSharp{
-                    fluid(quality: 90, maxWidth: 1920) {
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
-                }
-              }
-            }
-          }
           aboutus{   
             imagen{
               gatsbyImage( height:400)
@@ -31,6 +20,24 @@ export const useGetDataAboutUs = () => {
             aboutUs{
               title
               description
+            }
+            backgroundImageMobil{
+							localFile{
+                childImageSharp{
+                    fluid(quality: 90, maxWidth: 1920) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+              }
+            }
+            backgroundImageDesktop{
+              localFile{
+                childImageSharp{
+                    fluid(quality: 90, maxWidth: 1920) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+              }
             }
           }
         }
