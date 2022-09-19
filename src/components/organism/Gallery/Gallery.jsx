@@ -1,15 +1,14 @@
 import React from "react"
 import {
-  BsInstagram,
   BsArrowLeftShort,
   BsArrowRightShort,
 } from "react-icons/bs"
 
-import { images } from "../../constants"
-import SubHeading from "../../molecules/SubHeading/SubHeading"
+// import { images } from "../../constants"
+import {SubHeading} from "../../molecules"
 import "./Gallery.css"
 
-const Gallery = () => {
+export const  Gallery = () => {
   const scrollRef = React.useRef(null)
 
   const scroll = (direction) => {
@@ -40,7 +39,7 @@ const Gallery = () => {
       </div>
       <div className="app__gallery-images">
         <div className="app__gallery-images_container" ref={scrollRef}>
-          {[
+          {/* {[
             images.gallery01,
             images.gallery02,
             images.gallery03,
@@ -53,7 +52,7 @@ const Gallery = () => {
               <img src={image} alt="gallery_image" />
               <BsInstagram className="gallery__image-icon" />
             </div>
-          ))}
+          ))} */}
         </div>
         <div className="app__gallery-images_arrows">
           <BsArrowLeftShort
@@ -69,5 +68,3 @@ const Gallery = () => {
     </div>
   )
 }
-
-export default Gallery
