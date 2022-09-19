@@ -1,5 +1,8 @@
 export * from './HeaderParallax'
 export * from './Navbar'
 export * from './AboutUs'
+export * from './SpecialDrinks'
 export * from './Chef'
-
+export * from './Laurels'
+export * from './Gallery'
+export * from './Intro'
