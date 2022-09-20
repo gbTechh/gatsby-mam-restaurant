@@ -1,0 +1,17 @@
+.sliderCss{
+  width:calc(100vw - 100px);
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow: auto;
+}
+
+@media (min-width:760px){
+  .sliderCss{
+    width:calc(100vw - 140px);
+  }
+}
+@media (min-width:960px){
+  .sliderCss{
+    width:calc(100vw - 200px);
+  }
+}
