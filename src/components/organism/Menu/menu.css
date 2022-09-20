@@ -45,6 +45,7 @@
 }
 .menu__row-2{
   width: 100%;
+  display: block;  
 }
 .menu__col-slider{
   padding:0;

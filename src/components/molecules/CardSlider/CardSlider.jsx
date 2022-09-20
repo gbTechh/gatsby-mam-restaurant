@@ -22,10 +22,10 @@ export const CardSlider = React.forwardRef(
           />
         </div>
         <div className="card-slider__body">
-          <Text fw="strong" color="secondary1">
+          <Text fw="strong" color="secondary1" align="left">
             {title}
           </Text>
-          <Text size="small" color="secondary2">
+          <Text size="small" color="secondary2" align="left">
             {description}
           </Text>
         </div>

@@ -48,11 +48,9 @@ export const Menu = ({ children, ...props }) => {
         <Spacer y="10" />
         <Spacer y="10" />
         <Spacer y="10" />
-        <Row className="menu__row-2">
-          <Col className="menu__col-slider">
-            <SliderCss images={taxonomyMenu} />
-          </Col>
-        </Row>
+        <div className="menu__row-2">
+          <SliderCss images={taxonomyMenu} />
+        </div>
       </Container>
     </Container>
   )
