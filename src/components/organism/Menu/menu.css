@@ -3,8 +3,8 @@
   position: relative;
 }
 .menu__wrapper{
-  padding-top: calc(var(--spacing) * 20) ;
-  padding-bottom: calc(var(--spacing) * 20) ;
+  padding-top: calc(var(--spacing) * 25) ;
+  padding-bottom: calc(var(--spacing) * 25) ;
 
 
 }
