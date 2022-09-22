@@ -1,5 +1,5 @@
 import * as React from "react"
-import { AboutUs, Chef, LayoutHome, Menu } from "../components"
+import { AboutUs, Chef, Intro, LayoutHome, Menu } from "../components"
 
 export default function Homepage() {
 
@@ -8,6 +8,7 @@ export default function Homepage() {
       <AboutUs />
       <Menu />
       <Chef />
+      <Intro />
     </LayoutHome>
   )
 }

@@ -1,9 +1,15 @@
 
 .chef{
-  padding-top: calc(var(--spacing) * 25) ;
   padding-bottom: calc(var(--spacing) * 25) ;
 	background-color: var(--color-body);
   position: relative;
+}
+@media(min-width:760px){
+	.chef{
+		padding-top: calc(var(--spacing) * 25) ;
+		padding-bottom: calc(var(--spacing) * 50) ;
+
+	}
 }
 .chef-row{
 	display: flex;
@@ -15,6 +21,7 @@
 	.chef-row{
 		flex-direction: row;
 		justify-content: center;
+		align-items: flex-start;
 	}
 }
 .chef-col{
