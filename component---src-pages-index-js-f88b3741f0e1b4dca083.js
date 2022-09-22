@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_wordpress_homepage=self.webpackChunkgatsby_starter_wordpress_homepage||[]).push([[678],{6558:function(e,t,n){n.r(t),n.d(t,{default:function(){return l}});var r=n(7294),a=n(5349);function l(){return r.createElement(a.LayoutHome,{title:"Home Page"},r.createElement(a.AboutUs,null),r.createElement(a.Menu,null),r.createElement(a.Chef,null),r.createElement(a.Intro,null))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-f88b3741f0e1b4dca083.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_wordpress_homepage=self.webpackChunkgatsby_starter_wordpress_homepage||[]).push([[883],{429:function(e,t,r){r.r(t),r.d(t,{default:function(){return s}});var a=r(7294),n=r(5349);function s(){return a.createElement(n.LayoutHome,{title:"404: Page not found"})}}}]);
+//# sourceMappingURL=component---src-pages-404-js-b09cb84fb16eb7da726a.js.map
