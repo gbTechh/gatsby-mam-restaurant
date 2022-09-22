@@ -5,7 +5,7 @@
   max-height: 500px;
   display: flex;
   flex-direction: column;
-  padding:calc(var(--spacing) * 8);
+  padding:calc(var(--spacing) * 6.5);
   position: relative;
   /* margin-left: 20px; */
 
@@ -39,7 +39,7 @@
   transition: transform 0.3s ease;
 }
 .card-slider__body{
-  padding: 20px;
+  padding: 15px;
   padding-top: 150px;
   top:100px;
   width: 100%;
