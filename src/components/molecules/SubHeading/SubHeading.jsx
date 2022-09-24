@@ -10,7 +10,7 @@ export const SubHeading = ({ title, align = "center", size = "h4" }) => (
     <Text fw="strong" color="secondary1" align={align} size="h4">
       {title}
     </Text>
-    <SubHeadingIcon className="subheading-icon" w={100} />
+    <SubHeadingIcon className="subheading-icon" w={50} />
     <Spacer y="7" />
   </div>
 )
