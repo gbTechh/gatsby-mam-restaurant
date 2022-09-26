@@ -55,6 +55,8 @@
 @media screen and (min-width: 2000px) {
   .app__specialMenu-menu_img {
       width: 650px;
+    
+
   }
 
   .app__specialMenu-menu_img img {
@@ -77,6 +79,7 @@
 @media screen and (max-width: 650px) {
   .app__specialMenu-menu_img {
       width: 100%;
+      margin-top: 0rem;
   }
 
   .app__specialMenu-menu_heading {
@@ -120,4 +123,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

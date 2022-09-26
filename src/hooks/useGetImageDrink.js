@@ -5,20 +5,24 @@ export const useGetImageDrink = () =>{
     const data = useStaticQuery(graphql`
     {
       allWpSection {
-        edges {
+        edges{
           node {
             slug
-            specialdrinks {
-              groupText {
-                title
-                subtitle
-              }
-              image {
-                gatsbyImage(formats: AUTO, width: 410, placeholder: BLURRED)
-              }
+          specialdrinks {
+            groupText {
+              title
+              subtitle
+            }
+            drinkTitle {
+              drinksCold
+              hotDrink
+            }
+            image {
+              gatsbyImage(formats: AUTO, width: 400, placeholder: BLURRED, height: 700)
             }
           }
         }
+      }
       }
         }   
     `

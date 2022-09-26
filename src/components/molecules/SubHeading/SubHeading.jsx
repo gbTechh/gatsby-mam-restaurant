@@ -2,7 +2,7 @@ import React from "react"
 import { SubHeadingIcon } from "../../atoms"
 import { Spacer, Text } from "../../ui"
 
-// import { images } from '../../constants';
+
 import "./subheading.css"
 
 export const SubHeading = ({ title, align = "center", size = "h4" }) => (
