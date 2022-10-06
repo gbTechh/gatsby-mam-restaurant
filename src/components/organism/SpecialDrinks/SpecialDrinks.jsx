@@ -66,7 +66,6 @@ return (
             <p className="p__cormorant">€{e.node.hotDrinks.price}</p>
           </div>
         </div>
-
            <div className="app__menuitem-sub">
              <p className="p__opensans" style={{ color: '#AAAAAA' }}>{e.node.description}</p>
                </div>
