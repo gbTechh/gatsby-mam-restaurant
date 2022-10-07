@@ -1,10 +1,16 @@
-import React from 'react';
+import React from "react"
+import { SubHeadingIcon } from "../../atoms"
+import { Spacer, Text } from "../../ui"
 
-// import { images } from '../../constants';
 
-export const  SubHeading = ({ title }) => (
-  <div style={{ marginBottom: '1rem' }}>
-    <p className="p__cormorant">{title}</p>
-    {/* <img src={images.spoon} alt="spoon_image" className="spoon__img" /> */}
+import "./subheading.css"
+
+export const SubHeading = ({ title, align = "center", size = "h4" }) => (
+  <div className="subheading">
+    <Text fw="strong" color="secondary1" align={align} size="h4">
+      {title}
+    </Text>
+    <SubHeadingIcon className="subheading-icon" w={50} />
+    <Spacer y="7" />
   </div>
-);
+)

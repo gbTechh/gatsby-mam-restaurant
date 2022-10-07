@@ -1,8 +1,7 @@
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import React from "react"
-import { useEffect } from "react"
-import { useState } from "react"
+
 import { useGetDataHeader } from "../../../hooks"
 import { useImageHeroParallax } from "../../../hooks/useImageHeroParallax"
 
@@ -38,7 +37,7 @@ export const HeaderParallax = ({ children, ...props }) => {
     setImgParallax(
       window.screen.width <= 760 ? imageParallaxMobil : imageParallax
     )
-  }, [])
+  }, [imageParallaxMobil, imageParallax])
 
   useEffect(() => {
     window.addEventListener("resize", changeParallaxMQuery)
@@ -51,20 +50,22 @@ export const HeaderParallax = ({ children, ...props }) => {
   return (
     <Container fluid pd="0" className="header-parallax">
       <div className="header-parallax__opacity"></div>
-      <GatsbyImage
-        style={{
-          transform: `translateY(-${offset * 0.03}%)`,
-          maxWidth: "100%",
-          width: "100%",
-        }}
-        imgStyle={{
-          maxWidth: "100%",
-          width: "100%",
-        }}
-        image={getImage(imgParallax)}
-        alt="Mam restaurant"
-        className="header-parallax__image"
-      />
+      {imgParallax && (
+        <GatsbyImage
+          style={{
+            transform: `translateY(-${offset * 0.03}%)`,
+            maxWidth: "100%",
+            width: "100%",
+          }}
+          imgStyle={{
+            maxWidth: "100%",
+            width: "100%",
+          }}
+          image={getImage(imgParallax)}
+          alt="Mam restaurant"
+          className="header-parallax__image"
+        />
+      )}
       <Container pd="0" className="header-parallax__text-container">
         <Row wrap="wrap" className="header-parallax__row">
           <Col col="12">

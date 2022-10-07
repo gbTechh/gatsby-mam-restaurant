@@ -1,42 +1,75 @@
-import React from 'react';
-import { BsFillPlayFill, BsPauseFill } from 'react-icons/bs';
+import React, { useEffect, useRef, useState } from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // import { meal } from '../../constants';
-import './Intro.css';
+import "./Intro.css"
+import { useImageHeroParallax } from "../../../hooks/useImageHeroParallax"
+import { useImageMediaQuery } from "../../../hooks/useImageMediaQuery"
+import { useObserver } from "../../../hooks"
+import BackgroundImage from "gatsby-background-image"
+import { useGetIntroImages } from "../../../hooks/useGetIntroImages"
 
-export const  Intro = () => {
-  const [playVideo, setPlayVideo] = React.useState(false);
-  const vidRef = React.useRef();
+export const Intro = () => {
+  const { imageParallaxMobil, imageParallaxDesktop } = useGetIntroImages()
+
+  const { image } = useImageMediaQuery({
+    imageMobil: imageParallaxMobil,
+    imageDesktop: imageParallaxDesktop,
+  })
+
+  const [offset, setOffset] = useState()
+  const [isVisible, setIsVisible] = useState(false)
+
+  const imgIntersection = useRef()
+
+  const handleScroll = () => setOffset(window.pageYOffset)
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const [observer, setElements, entries] = useObserver({
+    root: null,
+    margin: "0px",
+    threshold: 0,
+  })
+
+  useEffect(() => {
+    const image = document.querySelectorAll(".is-observer")
+    setElements(image)
+  }, [setElements])
+
+  useEffect(() => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true)
+        observer.unobserve(entry.target)
+      } else {
+        setIsVisible(false)
+      }
+    })
+  }, [entries, observer])
 
   return (
-    <div className="app__video">
-      {/* <video
-        ref={vidRef}
-        src={meal}
-        type="video/mp4"
-        loop
-        controls={false}
-        muted
-      /> */}
-      <div className="app__video-overlay flex__center">
-        <div
-          className="app__video-overlay_circle flex__center"
-          onClick={() => {
-            setPlayVideo(!playVideo);
-            if (playVideo) {
-              vidRef.current.pause();
-            } else {
-              vidRef.current.play();
-            }
+    <div className="intro is-observer ">
+      {image && (
+        <BackgroundImage
+          ref={imgIntersection}
+          Tag="div"
+          className=""
+          fluid={image.localFile.childImageSharp.fluid}
+          style={{
+            backgroundPosition: `0 ${isVisible && offset * 0.03}px`,
+            backgroundAttachment: "fixed",
           }}
         >
-          {playVideo ? (
-            <BsPauseFill color="#fff" fontSize={30} />
-          ) : (
-            <BsFillPlayFill color="#fff" fontSize={30} />
-          )}
-        </div>
-      </div>
+          <div className="intro-height"></div>
+        </BackgroundImage>
+      )}
     </div>
-  );
-};
+  )
+}

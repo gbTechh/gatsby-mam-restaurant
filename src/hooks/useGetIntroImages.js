@@ -1,28 +1,16 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-export const useGetDataAboutUs = () => {
+export const useGetIntroImages = () => {
 
   const data = useStaticQuery(graphql`
   {
     allWpSection{
       edges{
         node{
-          title
           slug
-          aboutus{   
-            imagen{
-              gatsbyImage( height:400)
-            }
-            ourHistory{
-              title
-              description
-            }
-            aboutUs{
-              title
-              description
-            }
-            backgroundImageMobil{
-							localFile{
+          introParallax{                  
+            imageParallaxMobil{
+              localFile{
                 childImageSharp{
                     fluid(quality: 90, maxWidth: 1920) {
                         ...GatsbyImageSharpFluid_withWebp
@@ -30,7 +18,7 @@ export const useGetDataAboutUs = () => {
                 }
               }
             }
-            backgroundImageDesktop{
+            imageParallaxDesktop{
               localFile{
                 childImageSharp{
                     fluid(quality: 90, maxWidth: 1920) {
@@ -48,7 +36,7 @@ export const useGetDataAboutUs = () => {
   );
 
 
-  const dataSource = data.allWpSection.edges.filter(e => e.node.slug === 'aboutus')[0].node;
+  const dataSource = data.allWpSection.edges.filter(e => e.node.slug === 'intro-parallax')[0].node.introParallax;
 
 
   return dataSource;

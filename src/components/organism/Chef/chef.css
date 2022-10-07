@@ -1,0 +1,59 @@
+
+.chef{
+  padding-bottom: calc(var(--spacing) * 25) ;
+	background-color: var(--color-body);
+  position: relative;
+}
+@media(min-width:760px){
+	.chef{
+		padding-top: calc(var(--spacing) * 25) ;
+		padding-bottom: calc(var(--spacing) * 50) ;
+
+	}
+}
+.chef-row{
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+}
+@media(min-width:960px){
+	.chef-row{
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
+	}
+}
+.chef-col{
+	display: flex;
+	flex-direction: column;
+	
+}
+
+@media(min-width:960px){
+	.chef-col{
+		max-width: 500px;
+
+	}
+	.chef-col--1{
+		width: 50%;
+
+	}
+	.chef-col--2{
+		width: 50%;
+		max-width: 800px;
+	}
+	
+}
+
+
+
+.chef-names{
+	display: flex;
+	align-items: center;
+}
+.chef-names-group{
+	min-width: 120px;
+	padding: calc(var(--spacing) * 4)
+	
+}
