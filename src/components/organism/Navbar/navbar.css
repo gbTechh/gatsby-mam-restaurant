@@ -1,3 +1,10 @@
+.menu__close{
+  position: absolute;
+  top:20px;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+}
 .app__navbar {
   width: 100%;
   display: flex;
@@ -66,10 +73,12 @@
 .app__navbar-smallscreen_overlay {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 50%;
+  max-width: 300px;
+  min-width: 200px;
   height: 100vh;
-  background: var(--color-black);
+  background: var(--color-body);
   transition: .5s ease;
 
   flex-direction: column;
@@ -95,7 +104,7 @@
   cursor: pointer;
   color: var(--color-text-light);
   font-size: 2rem;
-  text-align: center;
+  text-align: right;
   font-family: var(--font-base);
 }
 

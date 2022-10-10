@@ -1,3 +1,8 @@
+.footer{
+    border-top: 1px solid #24261d;
+    margin-top: calc(var(--spacing) * 25) ;
+    background: #110c02;
+}
 .app__footer {
     width: 100%;
     position: relative;
@@ -36,9 +41,7 @@
 }
 
 
-.app__footer-links_work p:nth-child(2n + 1) {
-    margin-bottom: 1rem;
-}
+
 
 .app__footer-links_icons {
     margin-top: 0.5rem;

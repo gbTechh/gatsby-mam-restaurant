@@ -1,16 +1,17 @@
 
 .chef{
-  padding-bottom: calc(var(--spacing) * 25) ;
+  padding-top: calc(var(--spacing) * 25) ;
+		padding-bottom: calc(var(--spacing) * 25) ;
 	background-color: var(--color-body);
   position: relative;
 }
-@media(min-width:760px){
+/* @media(min-width:760px){
 	.chef{
 		padding-top: calc(var(--spacing) * 25) ;
 		padding-bottom: calc(var(--spacing) * 50) ;
 
 	}
-}
+} */
 .chef-row{
 	display: flex;
 	flex-direction: column-reverse;
@@ -20,7 +21,7 @@
 @media(min-width:960px){
 	.chef-row{
 		flex-direction: row;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: flex-start;
 	}
 }
@@ -37,6 +38,7 @@
 	}
 	.chef-col--1{
 		width: 50%;
+		max-width: 350px;
 
 	}
 	.chef-col--2{

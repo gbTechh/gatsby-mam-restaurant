@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-export const useGetImageDrink = () =>{
+export const useGetImageDrink = () => {
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
       allWpSection {
         edges{
@@ -18,7 +18,7 @@ export const useGetImageDrink = () =>{
               hotDrink
             }
             image {
-              gatsbyImage(formats: AUTO, width: 400, placeholder: BLURRED, height: 700)
+              gatsbyImage(formats: AUTO, width: 400, placeholder: BLURRED, height: 500)
             }
           }
         }
@@ -26,10 +26,10 @@ export const useGetImageDrink = () =>{
       }
         }   
     `
-    ); 
-    const dataSource = data.allWpSection.edges.filter(e => e.node.slug === 'special-drinks')[0].node;
+  );
+  const dataSource = data.allWpSection.edges.filter(e => e.node.slug === 'special-drinks')[0].node;
 
 
 
-    return dataSource;
+  return dataSource;
 }

@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react"
 
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import BackgroundImage from "gatsby-background-image"
 
-import { useGetDataAboutUs, useObserver } from "../../../hooks"
-import { Button, Col, Container, Row, Spacer, Text } from "../../ui"
+import { Button, Container, Spacer, Text } from "../../ui"
 
 import { useGetMenuTypes } from "../../../hooks/useGetMenuTypes"
 import "./menu.css"
@@ -13,10 +11,13 @@ import { useGetDataMenu } from "../../../hooks/useGetDataMenu"
 
 export const Menu = ({ children, ...props }) => {
   const taxonomyMenu = useGetMenuTypes()
-  const { title, description, mainImage } = useGetDataMenu().menu
+  const {
+    slug,
+    menu: { title, description, mainImage },
+  } = useGetDataMenu()
 
   return (
-    <Container fluid pd="0" as="section" id={""} className="menu">
+    <Container fluid pd="0" as="section" id={slug} className="menu">
       <Container className="menu menu__wrapper">
         <div className="menu__row-1">
           <div className="menu__row-1__col-1 ">

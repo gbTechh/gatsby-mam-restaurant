@@ -2,15 +2,16 @@ import React from "react"
 
 import { useGetFavoriteDishes } from "../../../hooks/useGetFavoriteDishes"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import {useGetAwardsFavorite} from "../../../hooks/useGetAwardsFavorite"
+import { useGetAwardsFavorite } from "../../../hooks/useGetAwardsFavorite"
 import { SubHeading } from "../../molecules"
 
-import { Container, Text } from "../../ui"
+import { Container, Spacer, Text } from "../../ui"
 import "./laurels.css"
 
-export const Laurels = ({children, ...props}) => { 
+export const Laurels = ({ children, ...props }) => {
   const {
-    favoriteDishes:{
+    slug,
+    favoriteDishes: {
       title,
       subtitle,
       mainImage,
@@ -19,52 +20,58 @@ export const Laurels = ({children, ...props}) => {
     },
   } = useGetFavoriteDishes()
 
-  const favoriteDishes =  useGetAwardsFavorite()
+  const favoriteDishes = useGetAwardsFavorite()
 
-return (
-<Container>
-<div className="app__bg app__wrapper section__padding" id="awards">
-  <div className="app__wrapper_info">
-      <SubHeading title={subtitle}  />
-      <Text 
-      size="h1" 
-      ff="head" 
-      color="primary2"
-      align="left"
-      className="headtext__cormorant">
-      {title}
-      </Text>
-
-    <div className="app__laurels_awards">
-      <div>
-       {favoriteDishes.map(e => (
-        <div className="app__laurels_awards-card" key={e.node.id}>
-        <div className="image_favorites">
-     <GatsbyImage
-       image={getImage(e.node.favorites.image)}
-      alt="image"
-      ></GatsbyImage>
-      </div>
-    <div className="app__laurels_awards-card_content">
-      <p className="p__cormorant" style={{ color: "#DCCA87" }}>
-         <p align="left" className="p__opensans">{e.node.name}</p>
-      </p>
-      
-      <Text align="left" className="p__opensans">{e.node.description}</Text>
-    </div>
-     </div>
-
-))}        
-    </div>
+  return (
+    <Container className="laurels" id={slug}>
+      <div className="laurels__row " id="awards">
+        <div className="app__wrapper_info">
+          <SubHeading title={subtitle} />
+          <Text
+            size="h2"
+            ff="head"
+            color="primary2"
+            align="left"
+            className="headtext__cormorant"
+          >
+            {title}
+          </Text>
+          <Spacer y="10" />
+          <div className="app__laurels_awards">
+            {favoriteDishes.map((e) => (
+              <React.Fragment key={e.node.name}>
+                <div className="app__laurels_awards-card" key={e.node.id}>
+                  <GatsbyImage
+                    image={getImage(e.node.favorites.image)}
+                    alt="image"
+                    style={{ alignSelf: "center" }}
+                  ></GatsbyImage>
+                  <Spacer x="5" />
+                  <div className="laurels__text">
+                    <Text color="primary2" fw="title" align="left">
+                      {e.node.name}
+                    </Text>
+                    <Text align="left">{e.node.description}</Text>
+                  </div>
+                </div>
+                <Spacer y="7" />
+              </React.Fragment>
+            ))}
+          </div>
         </div>
-            </div>
-            <div className="app__wrapper_img">
-            <GatsbyImage
+        <Spacer y="10|t:0" />
+        <Spacer y="10|t:0" />
+        <Spacer x="0|t:10" />
+        <div className="app__wrapper_img">
+          <GatsbyImage
             image={getImage(mainImage)}
-          alt="main_image"
-            ></GatsbyImage>
-            </div>
-    </div>
-          </Container>
-);
+            alt="main_image"
+            style={{
+              borderRadius: "0px 50px 0px 50px",
+            }}
+          ></GatsbyImage>
+        </div>
+      </div>
+    </Container>
+  )
 }

@@ -1,0 +1,32 @@
+.contact{
+  padding-top: calc(var(--spacing) * 25) ;
+  padding-bottom: calc(var(--spacing) * 25) ;
+  flex-direction: column;
+  display: flex;
+}
+@media(min-width:960px){
+  .contact{
+    flex-direction: row;
+    justify-content: space-between;
+  };
+}
+.contact__content{
+  width: 100%;
+  flex:1;
+}
+.contact__map{
+  border-radius: 50px 0 50px 0;
+  overflow: hidden;
+  width: 100%;
+  flex:1;
+  position: relative;
+}
+@media(min-width:960px){
+  .contact__content{
+    width: 45%;
+  }
+  .contact__map{
+    width: 55%;
+
+  }
+}

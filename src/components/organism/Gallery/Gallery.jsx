@@ -1,67 +1,43 @@
 import React from "react"
-import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 
-// import { images } from "../../constants"
-import { SubHeading } from "../../molecules"
+import { useGetDataGallery } from "../../../hooks/useGetDataGallery"
+
+import { SliderGallery, SubHeading } from "../../molecules"
+import { Button, Container, Spacer, Text } from "../../ui"
 import "./gallery.css"
 
 export const Gallery = () => {
-  const scrollRef = React.useRef(null)
-
-  const scroll = (direction) => {
-    const { current } = scrollRef
-
-    if (direction === "left") {
-      current.scrollLeft -= 300
-    } else {
-      current.scrollLeft += 300
-    }
-  }
+  const {
+    slug,
+    id,
+    gallery: {
+      titlesGallery: { mainTitle, subtitle },
+      linkInstagram,
+      description,
+      gallery: arrayGallery,
+    },
+  } = useGetDataGallery()
 
   return (
-    <div className="app__gallery flex__center">
+    <Container className="gallery" id={slug}>
       <div className="app__gallery-content">
-        <SubHeading title="Instagram" />
-        <h1 className="headtext__cormorant">Photo Gallery</h1>
-        <p
-          className="p__opensans"
-          style={{ color: "#AAAAAA", marginTop: "2rem" }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat
-          mattis ipsum turpis elit elit scelerisque egestas mu.
-        </p>
-        <button type="button" className="custom__button">
+        <SubHeading title={subtitle} />
+        <Text align="left" size="h2" ff="head" color="primary2">
+          {mainTitle}
+        </Text>
+        <Spacer y="10" />
+        <Text align="left">{description}</Text>
+        <Spacer y="10" />
+        <Button as="a" href={linkInstagram}>
           View More
-        </button>
+        </Button>
       </div>
+      <Spacer y="10|t:10|d:0" />
+      <Spacer y="10|t:10|d:0" />
+      <Spacer x="0|t:0|d:10" />
       <div className="app__gallery-images">
-        <div className="app__gallery-images_container" ref={scrollRef}>
-          {/* {[
-            images.gallery01,
-            images.gallery02,
-            images.gallery03,
-            images.gallery04,
-          ].map((image, index) => (
-            <div
-              className="app__gallery-images_card flex__center"
-              key={`gallery_image-${index + 1}`}
-            >
-              <img src={image} alt="gallery_image" />
-              <BsInstagram className="gallery__image-icon" />
-            </div>
-          ))} */}
-        </div>
-        <div className="app__gallery-images_arrows">
-          <BsArrowLeftShort
-            className="gallery__arrow-icon"
-            onClick={() => scroll("left")}
-          />
-          <BsArrowRightShort
-            className="gallery__arrow-icon"
-            onClick={() => scroll("right")}
-          />
-        </div>
+        <SliderGallery images={arrayGallery} />
       </div>
-    </div>
+    </Container>
   )
 }

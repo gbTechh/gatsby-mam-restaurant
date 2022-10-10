@@ -1,21 +1,21 @@
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import React from "react"
 import { useGetDataChef } from "../../../hooks/useGetDataChef"
-import { ItemNavbar } from "../../atoms"
 
 import { SubHeading } from "../../molecules"
 import { Container, Spacer, Text } from "../../ui"
-// import { images } from '../../constants';
+
 import "./chef.css"
 
 export const Chef = () => {
   const {
+    slug,
     chef: { titles, description, imageChefs, sign, nameChefs, jobPosition },
   } = useGetDataChef()
   const chefsArr = nameChefs.split(",")
   const jobArr = jobPosition.split(",")
   return (
-    <Container className="chef">
+    <Container className="chef" id={slug}>
       <div className="chef-row">
         <div className="chef-col chef-col--1">
           <GatsbyImage
@@ -72,8 +72,8 @@ export const Chef = () => {
                 objectFit: "contain",
               }}
             />
-            <Spacer y="10" />
-            <Spacer y="10" />
+            <Spacer y="10|t:10|d:0" />
+            <Spacer y="10|t:10|d:0" />
           </div>
         </div>
       </div>

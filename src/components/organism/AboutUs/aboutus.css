@@ -12,6 +12,14 @@
 
 
 }
+@media (min-width:960px){
+  .about-us__wrapper{
+    padding-top: calc(var(--spacing) * 0) ;
+    padding-bottom: calc(var(--spacing) * 0) ;
+  
+  
+  }
+}
 .about-us__row{
   display: flex;
   flex-direction: column;

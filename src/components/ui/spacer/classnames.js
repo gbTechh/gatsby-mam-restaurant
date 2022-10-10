@@ -77,6 +77,18 @@ export const classes = ({ x, y }) => {
     { "mqd-spacer--y-8": checkProp(y, 'd') === "8" },
     { "mqd-spacer--y-9": checkProp(y, 'd') === "9" },
     { "mqd-spacer--y-10": checkProp(y, 'd') === "10" },
+
+    { "mqb-spacer--y-0": checkProp(y, 'b') === "0" },
+    { "mqb-spacer--y-1": checkProp(y, 'b') === "1" },
+    { "mqb-spacer--y-2": checkProp(y, 'b') === "2" },
+    { "mqb-spacer--y-3": checkProp(y, 'b') === "3" },
+    { "mqb-spacer--y-4": checkProp(y, 'b') === "4" },
+    { "mqb-spacer--y-5": checkProp(y, 'b') === "5" },
+    { "mqb-spacer--y-6": checkProp(y, 'b') === "6" },
+    { "mqb-spacer--y-7": checkProp(y, 'b') === "7" },
+    { "mqb-spacer--y-8": checkProp(y, 'b') === "8" },
+    { "mqb-spacer--y-9": checkProp(y, 'b') === "9" },
+    { "mqb-spacer--y-10": checkProp(y, 'b') === "10" },
   )
 
   return cls

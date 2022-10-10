@@ -3,12 +3,16 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 import { useLogo } from "../../../hooks"
-import { ItemNavbar } from "../../atoms"
+import { ItemNavbar, MenuBurguer } from "../../atoms"
 
 import "./navbar.css"
+import { Spacer, Text } from "../../ui"
+import { useGetMenuNav } from "../../../hooks/useGetMenuNav"
 
 export const Navbar = () => {
   const logo = useLogo()
+  const menu = useGetMenuNav()
+
   const [toggleMenu, setToggleMenu] = React.useState(false)
   return (
     <nav className="app__navbar">
@@ -18,47 +22,43 @@ export const Navbar = () => {
         </Link>
       </div>
       <ul className="app__navbar-links">
-        <ItemNavbar slug="home">Home</ItemNavbar>
-        <ItemNavbar slug="aboutus">About us</ItemNavbar>
-        <ItemNavbar slug="menu">Menu</ItemNavbar>
-        <ItemNavbar slug="drinks">Drinks</ItemNavbar>
-        <ItemNavbar slug="chef">Chef</ItemNavbar>
-        <ItemNavbar slug="laurlels">Laurels</ItemNavbar>
-        <ItemNavbar slug="gallery">Gallery</ItemNavbar>
-        <ItemNavbar slug="contact">Contact</ItemNavbar>
+        {menu.length &&
+          menu.map((item) => (
+            <React.Fragment key={item.node.slug}>
+              <ItemNavbar slug={item.node.slug}>{item.node.title}</ItemNavbar>
+            </React.Fragment>
+          ))}
       </ul>
 
       <div className="app__navbar-smallscreen">
-        <p onClick={() => setToggleMenu(!toggleMenu)}>menu</p>
+        <span onClick={() => setToggleMenu(!toggleMenu)}>
+          <MenuBurguer />
+        </span>
         {toggleMenu && (
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
-            <p onClick={() => setToggleMenu(false)}>Menu</p>
+            <Text
+              fw="title"
+              size="h3"
+              className="menu__close"
+              onClick={() => setToggleMenu(false)}
+            >
+              X
+            </Text>
             <ul className="app__navbar-smallscreen_links">
-              <li>
-                <a href="#home" onClick={() => setToggleMenu(false)}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" onClick={() => setToggleMenu(false)}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#menu" onClick={() => setToggleMenu(false)}>
-                  Menu
-                </a>
-              </li>
-              <li>
-                <a href="#awards" onClick={() => setToggleMenu(false)}>
-                  Awards
-                </a>
-              </li>
-              <li>
-                <a href="#contact" onClick={() => setToggleMenu(false)}>
-                  Contact
-                </a>
-              </li>
+              {menu.length &&
+                menu.map((item) => (
+                  <React.Fragment key={item.node.slug}>
+                    <Text align="right" size="h4">
+                      <a
+                        href={`#${item.node.slug}`}
+                        onClick={() => setToggleMenu(false)}
+                      >
+                        {item.node.title}
+                      </a>
+                    </Text>
+                    <Spacer y="10" />
+                  </React.Fragment>
+                ))}
             </ul>
           </div>
         )}
