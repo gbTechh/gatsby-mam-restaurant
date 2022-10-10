@@ -63,7 +63,7 @@ export const Intro = () => {
           className=""
           fluid={image.localFile.childImageSharp.fluid}
           style={{
-            backgroundPosition: `0 -${isVisible && offset * 0.03}px`,
+            backgroundPosition: `0 ${isVisible && offset * 0.03}px`,
             backgroundAttachment: "fixed",
           }}
         >
