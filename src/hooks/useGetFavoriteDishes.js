@@ -12,7 +12,7 @@ export const useGetFavoriteDishes = () => {
                   title
                   subtitle
                   mainImage {
-                    gatsbyImage(width: 350, formats: AUTO, placeholder: BLURRED, height: 450)
+                    gatsbyImage(width:450, height:550, formats: AUTO, placeholder: BLURRED)
                   }
                   backgroundImageDesktop {
                     gatsbyImage(width: 1920, placeholder: BLURRED, formats: AUTO)

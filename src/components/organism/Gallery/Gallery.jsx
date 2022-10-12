@@ -35,6 +35,8 @@ export const Gallery = () => {
       <Spacer y="10|t:10|d:0" />
       <Spacer y="10|t:10|d:0" />
       <Spacer x="0|t:0|d:10" />
+      <Spacer x="0|t:0|d:10" />
+
       <div className="app__gallery-images">
         <SliderGallery images={arrayGallery} />
       </div>

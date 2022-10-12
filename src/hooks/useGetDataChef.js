@@ -20,7 +20,7 @@ export const useGetDataChef = () => {
             nameChefs
             jobPosition
             imageChefs{
-              gatsbyImage(width:300, height:450)
+              gatsbyImage(width:450, height:550)
             }
           }
         }

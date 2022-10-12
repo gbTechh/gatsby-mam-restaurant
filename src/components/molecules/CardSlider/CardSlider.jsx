@@ -14,7 +14,7 @@ export const CardSlider = React.forwardRef(
             image={getImage(image)}
             style={{
               boxShadow: "1px 1px rgba(0,0,0,0.2)",
-              borderRadius: "50%",
+              borderRadius: "20px",
               border: "5px solid var(--color-secondary-1)",
             }}
             imgStyle={{ objectFit: "contain" }}

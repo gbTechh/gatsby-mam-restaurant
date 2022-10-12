@@ -3,6 +3,7 @@
   padding-bottom: calc(var(--spacing) * 25) ;
   flex-direction: column;
   display: flex;
+  justify-content: space-between;
 }
 
 
@@ -13,16 +14,17 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  max-width: 650px;
 
 }
 
 
 .app__gallery-images {
-  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
   position: relative;
+
 }
 
 @media(min-width:960px){
@@ -30,10 +32,10 @@
     flex-direction: row;
   }
   .app__gallery-content{
-    width: 50%;
+    width: 40%;
   }
   .app__gallery-images {
-    width:50%;
+    width:45%;
   }
 }
 
