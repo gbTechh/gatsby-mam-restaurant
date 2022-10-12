@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
 import { useLogo } from "../../../hooks"
-import { ItemNavbar, MenuBurguer } from "../../atoms"
+import { CloseIcon, ItemNavbar, MenuBurguer } from "../../atoms"
 
 import "./navbar.css"
 import { Spacer, Text } from "../../ui"
@@ -36,14 +36,9 @@ export const Navbar = () => {
         </span>
         {toggleMenu && (
           <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
-            <Text
-              fw="title"
-              size="h3"
-              className="menu__close"
-              onClick={() => setToggleMenu(false)}
-            >
-              X
-            </Text>
+            <div className="menu__close" onClick={() => setToggleMenu(false)}>
+              <CloseIcon />
+            </div>
             <ul className="app__navbar-smallscreen_links">
               {menu.length &&
                 menu.map((item) => (

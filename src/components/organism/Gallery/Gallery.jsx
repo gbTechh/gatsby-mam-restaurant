@@ -21,7 +21,7 @@ export const Gallery = () => {
   return (
     <Container className="gallery" id={slug}>
       <div className="app__gallery-content">
-        <SubHeading title={subtitle} />
+        <SubHeading title={subtitle} align="left" />
         <Text align="left" size="h2" ff="head" color="primary2">
           {mainTitle}
         </Text>

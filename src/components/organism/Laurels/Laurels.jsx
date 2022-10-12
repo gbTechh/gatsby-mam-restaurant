@@ -26,7 +26,7 @@ export const Laurels = ({ children, ...props }) => {
     <Container className="laurels" id={slug}>
       <div className="laurels__row " id="awards">
         <div className="app__wrapper_info">
-          <SubHeading title={subtitle} />
+          <SubHeading title={subtitle} align="left" />
           <Text
             size="h2"
             ff="head"
