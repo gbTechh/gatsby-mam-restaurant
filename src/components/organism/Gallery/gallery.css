@@ -1,9 +1,14 @@
 .gallery{
+
+}
+
+.gallery-wrapper{
   padding-top: calc(var(--spacing) * 25) ;
   padding-bottom: calc(var(--spacing) * 25) ;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
+  background: none;
 }
 
 
@@ -28,7 +33,7 @@
 }
 
 @media(min-width:960px){
-  .gallery{
+  .gallery-wrapper{
     flex-direction: row;
   }
   .app__gallery-content{

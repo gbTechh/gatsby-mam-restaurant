@@ -20,7 +20,25 @@ export const useGetDataChef = () => {
             nameChefs
             jobPosition
             imageChefs{
-              gatsbyImage(width:450, height:550)
+              gatsbyImage(width:450, height:600)
+            }
+            backgroundImageMobil{
+							localFile{
+                childImageSharp{
+                    fluid(quality: 90, maxWidth: 1920) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+              }
+            }
+            backgroundImageDesktop{
+              localFile{
+                childImageSharp{
+                    fluid(quality: 90, maxWidth: 1920) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+              }
             }
           }
         }

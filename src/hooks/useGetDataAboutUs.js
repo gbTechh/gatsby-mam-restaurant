@@ -11,7 +11,7 @@ export const useGetDataAboutUs = () => {
           slug
           aboutus{   
             imagen{
-              gatsbyImage( height:400)
+              gatsbyImage( height:300)
             }
             ourHistory{
               title

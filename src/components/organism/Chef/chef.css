@@ -1,8 +1,8 @@
 
-.chef{
+.chef-wrapper{
   padding-top: calc(var(--spacing) * 25) ;
 		padding-bottom: calc(var(--spacing) * 25) ;
-	background-color: var(--color-body);
+
   position: relative;
 }
 /* @media(min-width:760px){

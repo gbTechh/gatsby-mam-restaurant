@@ -77,7 +77,8 @@ export const AboutUs = ({ children, ...props }) => {
               <div
                 className="about-us__col about-us__col--1 is-observer"
                 style={{
-                  transform: isVisible && `translateY(-${offset * 0.0083}%)`,
+                  transform:
+                    isVisible && `translateY(-${offset * 0.0083 * 0}%)`,
                 }}
               >
                 <Text

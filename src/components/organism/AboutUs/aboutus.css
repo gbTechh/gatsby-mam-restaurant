@@ -33,7 +33,12 @@
   }
 }
 .about-us__image{
-  height: 400px;
+  height: 300px;
+}
+@media(min-width: 760px){
+  .about-us__image{  
+    height: 400px;
+  }
 }
 .about-us__col{
   width:100%;
@@ -45,10 +50,15 @@
   margin-bottom: calc(var(--spacing) * 4);
 }
 .about-us__col.about-us__col--2{
-  min-height: 700px;
+  min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media(min-width: 760px){
+  .about-us__col.about-us__col--2{  
+    min-height: 700px;
+  }
 }
 .about-us__text-about{
   text-align: right;

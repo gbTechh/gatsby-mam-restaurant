@@ -21,7 +21,7 @@ export const SubHeading = ({ title, align = "center", size = "h4" }) => (
         fw="strong"
         color="secondary1"
         size="h4"
-        style={{ textTransform: "capitalize" }}
+        style={{ textTransform: "capitalize", width: "max-content" }}
       >
         {title}
       </Text>
