@@ -45,7 +45,7 @@ export const Navbar = () => {
                   <React.Fragment key={item.node.slug}>
                     <Text align="right" size="h4">
                       <a
-                        href={`#${item.node.slug}`}
+                        href={`/#${item.node.slug}`}
                         onClick={() => setToggleMenu(false)}
                       >
                         {item.node.title}

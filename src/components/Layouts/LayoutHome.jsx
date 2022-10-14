@@ -5,13 +5,18 @@ import { Container } from "../ui"
 import { Seo } from "../atoms"
 import { HeaderParallax, Navbar } from "../organism"
 
-export const LayoutHome = ({ title = "", description, children }) => {
+export const LayoutHome = ({
+  title = "",
+  description,
+  noHeader = false,
+  children,
+}) => {
   return (
     <>
       <Seo title={title} description={description} />
       <Container pd="0" fluid>
         <Navbar />
-        <HeaderParallax />
+        {noHeader || <HeaderParallax />}
 
         <main className="background-color">{children}</main>
 

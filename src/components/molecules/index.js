@@ -6,4 +6,5 @@ export * from './SliderCss'
 export * from './SliderGallery'
 export * from './CardSlider'
 export * from './MenuItem'
+export * from './CartMenu'
 

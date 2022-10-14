@@ -8,6 +8,7 @@ import { useGetMenuTypes } from "../../../hooks/useGetMenuTypes"
 import "./menu.css"
 import { SliderCss } from "../../molecules"
 import { useGetDataMenu } from "../../../hooks/useGetDataMenu"
+import { Link } from "gatsby"
 
 export const Menu = ({ children, ...props }) => {
   const taxonomyMenu = useGetMenuTypes()
@@ -39,9 +40,11 @@ export const Menu = ({ children, ...props }) => {
             <Text align="left">{description}</Text>
             <Spacer y={"10"} />
             <div className="menu__row-1__button">
-              <Button size="md" br="sm">
-                View menu
-              </Button>
+              <Link to="/menu">
+                <Button size="md" br="sm">
+                  View Menu
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

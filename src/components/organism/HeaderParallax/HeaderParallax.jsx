@@ -97,14 +97,14 @@ export const HeaderParallax = ({ children, ...props }) => {
         <Spacer y="8" />
         <Row className="header-parallax__row-btns">
           <Col>
-            <Link to="/#about-us">
+            <Link to="/#aboutus">
               <Button size="md" br="sm">
                 Explore now
               </Button>
             </Link>
           </Col>
           <Col>
-            <Link to="/">
+            <Link to="/menu">
               <Button size="md" color="primary1" textColor="light" br="sm">
                 View Menu
               </Button>
