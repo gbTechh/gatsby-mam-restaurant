@@ -20,6 +20,11 @@ export const useGetDataContact = () => {
               latitude
               longitude
             }
+            phone
+            socialMedia{
+							facebook
+              instagram
+            }
           }
         }
       }

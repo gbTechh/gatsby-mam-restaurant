@@ -111,3 +111,7 @@
 .slider-css__btn--right{
   right:-15px;
 }
+
+.slider-card{
+  padding:'10px'
+}

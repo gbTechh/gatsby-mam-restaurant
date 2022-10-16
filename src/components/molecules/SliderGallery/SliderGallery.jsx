@@ -36,16 +36,17 @@ export const SliderGallery = ({ images }) => {
       <Slider {...settings}>
         {images &&
           images.map((img, i) => (
-            <GatsbyImage
-              key={img.id}
-              image={getImage(img.gatsbyImage)}
-              style={{
-                minHeight: "350px",
-                height: "100%",
-                border: "5px solid black",
-              }}
-              alt="image-food"
-            />
+            <div className="slider-card" key={img.id}>
+              <GatsbyImage
+                image={getImage(img.gatsbyImage)}
+                style={{
+                  minHeight: "350px",
+                  height: "100%",
+                  border: "5px solid black",
+                }}
+                alt="image-food"
+              />
+            </div>
           ))}
       </Slider>
     </div>
