@@ -31,7 +31,10 @@ export const Navbar = () => {
       </ul>
 
       <div className="app__navbar-smallscreen">
-        <span onClick={() => setToggleMenu(!toggleMenu)}>
+        <span
+          onClick={() => setToggleMenu(!toggleMenu)}
+          className="app__navbar-span"
+        >
           <MenuBurguer />
         </span>
         {toggleMenu && (

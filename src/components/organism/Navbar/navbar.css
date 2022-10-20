@@ -19,6 +19,11 @@
   background:var(--color-navbar);
 }
 
+.app__navbar-span{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .app__navbar-logo {
   display: flex;
   justify-content: flex-start;

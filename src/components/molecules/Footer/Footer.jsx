@@ -57,13 +57,13 @@ export const Footer = () => {
             <div className="app__footer-links_icons">
               <Link
                 to={facebook}
-                style={{ display: "grid", placeItems: "center" }}
+                style={{ display: "grid", placeItems: "center", width: "50px" }}
               >
                 <Facebook />
               </Link>
               <Link
                 to={instagram}
-                style={{ display: "grid", placeItems: "center" }}
+                style={{ display: "grid", placeItems: "center", width: "50px" }}
               >
                 <Instagram />
               </Link>
