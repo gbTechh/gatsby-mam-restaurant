@@ -22,7 +22,7 @@
 
 }
 .card-slider:hover .card-slider__head{
-  transform:translate(1%,1%) rotate(-2deg);
+  transform:translate(-10px,10px) rotate(-5deg);
   border-radius: 50%;
   
 
