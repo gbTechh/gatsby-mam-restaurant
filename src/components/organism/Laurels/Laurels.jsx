@@ -68,6 +68,7 @@ export const Laurels = ({ children, ...props }) => {
             alt="main_image"
             style={{
               borderRadius: "0px 50px 0px 50px",
+              minWidth: "100%",
             }}
           ></GatsbyImage>
         </div>

@@ -39,9 +39,12 @@ export const Footer = () => {
               Contact Us
             </Text>
             <Spacer y="5" />
-            <Text ff="head">{direction}</Text>
+            <Text ff="base" size="base">
+              {direction}
+            </Text>
+            <Spacer y="2" />
             {phonesArr.map((e) => (
-              <Text key={e} ff="head">
+              <Text key={e} ff="base" size="base">
                 {e}
               </Text>
             ))}
@@ -49,7 +52,7 @@ export const Footer = () => {
 
           <div className="app__footer-links_logo">
             {/* <img src={images.gericht} alt="footer_logo" /> */}
-            <Text ff="head">
+            <Text ff="base">
               &quot;The best way to find yourself is to lose yourself in the
               service of others.&quot;
             </Text>
@@ -57,13 +60,21 @@ export const Footer = () => {
             <div className="app__footer-links_icons">
               <Link
                 to={facebook}
-                style={{ display: "grid", placeItems: "center", width: "50px" }}
+                style={{
+                  display: "grid",
+                  placeItems: "center",
+                  width: "max-content",
+                }}
               >
                 <Facebook />
               </Link>
               <Link
                 to={instagram}
-                style={{ display: "grid", placeItems: "center", width: "50px" }}
+                style={{
+                  display: "grid",
+                  placeItems: "center",
+                  width: "max-content",
+                }}
               >
                 <Instagram />
               </Link>
@@ -72,11 +83,11 @@ export const Footer = () => {
 
           <div className="app__footer-links_work">
             <Text ff="head" size="h2">
-              Working Hours
+              Open Hours
             </Text>
             <Spacer y="5" />
             {hoursArr.map((e) => (
-              <Text ff="head" key={e}>
+              <Text ff="base" key={e}>
                 {e}
               </Text>
             ))}

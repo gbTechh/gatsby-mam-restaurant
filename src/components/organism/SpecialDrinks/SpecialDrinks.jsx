@@ -7,6 +7,7 @@ import { Button, Container, Spacer, Text } from "../../ui"
 import { useGetColdDrinks } from "../../../hooks/useGetColdDrinks"
 import { useGetHotDrinks } from "../../../hooks/useGetHotDrinks"
 import { useGetImageDrink } from "../../../hooks/useGetImageDrink"
+import { Link } from "gatsby"
 
 export const SpecialDrinks = ({ children, ...props }) => {
   const {
@@ -46,7 +47,7 @@ export const SpecialDrinks = ({ children, ...props }) => {
             <Spacer y="5" />
             <div className="app__specialMenu_menu_items">
               {hotDrinks.map((e) => (
-                <div key={e.node.slug}>
+                <div key={e.node.name}>
                   <div className="app__menuitem">
                     <div className="app__menuitem-head">
                       <div className="app__menuitem-name">
@@ -83,8 +84,8 @@ export const SpecialDrinks = ({ children, ...props }) => {
             </Text>
             <Spacer y="5" />
             <div className="app__specialMenu_menu_items">
-              {coldDrinks.map((e) => (
-                <div key={e.node.slug}>
+              {coldDrinks.map((e, i) => (
+                <div key={e.node.name + i}>
                   <div className="app__menuitem">
                     <div className="app__menuitem-head">
                       <div className="app__menuitem-name">
@@ -122,9 +123,11 @@ export const SpecialDrinks = ({ children, ...props }) => {
             justifyContent: "center",
           }}
         >
-          <Button type="button" className="custom__button">
-            View More
-          </Button>
+          <Link to="/drinks">
+            <Button type="button" className="custom__button">
+              View Drinks
+            </Button>
+          </Link>
         </div>
       </Container>
     </Container>

@@ -75,27 +75,6 @@ export const AboutUs = ({ children, ...props }) => {
           <Container className="about-us__wrapper">
             <div className="about-us__row">
               <div
-                className="about-us__col about-us__col--1 is-observer"
-                style={{
-                  transform:
-                    isVisible && `translateY(-${offset * 0.0083 * 0}%)`,
-                }}
-              >
-                <Text
-                  color="primary2"
-                  size="h1"
-                  as="h2"
-                  className="about-us__title-about"
-                  ff="head"
-                >
-                  {aboutUs.title}
-                </Text>
-                <Spacer y="5" />
-                <Text className="about-us__text-about" color="secondary2">
-                  {aboutUs.description}
-                </Text>
-              </div>
-              <div
                 className="about-us__col about-us__col--2"
                 ref={imgIntersection}
               >

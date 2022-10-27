@@ -36,8 +36,10 @@ export const Contact = ({ children, ...props }) => {
         {hours
           .split("*")
           .filter((e) => e)
-          .map((hour) => (
-            <Text align="left">{hour}</Text>
+          .map((hour, i) => (
+            <Text key={i} align="left">
+              {hour}
+            </Text>
           ))}
         <Spacer y="10|t:10|d:0" />
         <Spacer y="10|t:10|d:0" />

@@ -29,7 +29,7 @@
 }
 @media(min-width: 960px){
   .about-us__row{  
-    flex-direction: row;    
+    flex-direction: row-reverse;    
   }
 }
 .about-us__image{
