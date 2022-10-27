@@ -22,7 +22,8 @@
 
 }
 .card-slider:hover .card-slider__head{
-  transform: rotate(2deg);
+  transform:translate(1%,1%) rotate(-2deg);
+  border-radius: 50%;
   
 
 }
